@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.blend-multiply {
+    mix-blend-mode: multiply;
+}
+
+.drop-cap:first-letter {
+    font-size: 4.5em;
+    float: left;
+    @apply font-serif;
+    @apply text-primary;
+    @apply mr-4;
+    @apply my-0;
+    @apply py-0;
+}
+
+blockquote {
+    @apply text-3xl;
+    @apply text-primary;
+    @apply font-bold;
+    @apply font-serif;
+    @apply py-12;
+    @apply text-center;
+}
