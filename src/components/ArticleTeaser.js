@@ -1,8 +1,9 @@
 import React from 'react'
 import { useStaticQuery, graphql } from "gatsby"
+import Link from 'gatsby-link'
 
 export default function ArticleTeaser({ blok }){
-  const { articles } = useStaticQuery(graphql`
+  const { articles, authors } = useStaticQuery(graphql`
   query Articles {
     articles: allStoryblokEntry(filter: {field_component: {eq: "blogpost"}}) {
       edges {
@@ -13,26 +14,30 @@ export default function ArticleTeaser({ blok }){
         }
       }
     }
+    authors: allStoryblokEntry(filter: {field_component: {eq: "author"}}) {
+      edges {
+        node {
+          name
+          uuid
+          content
+        }
+      }
+    }
   } 
   `)
   let article = articles.edges.filter(({ node }) => node.full_slug === blok.article.cached_url)
   let content = article.length ? JSON.parse(article[0].node.content) : {};
-
-  const resizedImage = function(imageUrl) {
-    if (typeof imageUrl !== 'undefined') {
-      return imageUrl.replace('//a.storyblok.com', '//img2.storyblok.com/300x250')
-    }
-    return null
-  }
-
+  let  { author } = content
+  let thisAuthor = authors.edges.filter(({ node }) => node.uuid === author)
+  let authorContent = thisAuthor.length ? JSON.parse(thisAuthor[0].node.content) : {};
 
   return (
-      <div className="py-16">
+      <Link to={article[0].node.full_slug} className="py-16 block transition hover:opacity-50">
         <img src={content.image} className="pb-10 w-full"/>
         <h2 className="pb-6 text-lg font-bold">{content.title}</h2>
         <p className="pb-6 text-gray-700 leading-loose">{content.intro}</p>
-        <p className="text-gray-700">{content.author}</p>
-      </div>
+        <p className="text-gray-700">{authorContent.name}</p>
+      </Link>
   )
 }
 

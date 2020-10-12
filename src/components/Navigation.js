@@ -45,14 +45,14 @@ const Nav = ({ settings, lang }) => (
           </ul>
           <ul className="flex flex-col mt-4 -mx-4 pt-4 border-t md:flex-row md:items-center md:mx-0 md:mt-0 md:pt-0 md:border-0">
             <li>
-              <Link to="/en/blog/first-post" 
+              <Link to="/" 
               className={`block px-4 py-1 md:p-2 rounded-lg lg:px-4 ${lang === 'en' ? "bg-primary text-white" : ""}`}
               >
                 EN
               </Link>
             </li>
             <li>
-              <Link to="/de/blog/first-post" 
+              <Link to="/de" 
               className={`block px-4 py-1 md:p-2 rounded-lg lg:px-4 ${lang === 'de' ? "bg-primary text-white" : ""}`}
               >
                 DE

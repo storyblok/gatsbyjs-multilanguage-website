@@ -12,7 +12,7 @@ const FeaturedArticles = ({blok}) => {
         </div>
         <ul className="flex">
           {blok.articles.map((article) => (
-              <li key={article._uid} className="px-8 w-1/3">
+              <li key={article._uid} className="pr-8 w-1/3">
                 <ArticleTeaser blok={article} />
               </li>
             )

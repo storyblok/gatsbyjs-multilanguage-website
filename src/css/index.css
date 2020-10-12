@@ -6,13 +6,13 @@
 }
 
 .drop-cap:first-letter {
-    font-size: 4.5em;
+    font-size: 5rem;
     float: left;
+    line-height: 2rem;
     @apply font-serif;
     @apply text-primary;
     @apply mr-4;
-    @apply my-0;
-    @apply py-0;
+    @apply my-8;
 }
 
 .bg-white-half {
@@ -20,7 +20,7 @@
 }
 
 blockquote {
-    @apply text-3xl;
+    @apply text-4xl;
     @apply text-primary;
     @apply font-bold;
     @apply font-serif;

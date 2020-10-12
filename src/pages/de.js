@@ -27,7 +27,7 @@ export default class extends React.Component {
 
 export const query = graphql`
   query {
-    storyblokEntry(full_slug: { eq: "home" }) {
+    storyblokEntry(full_slug: { eq: "de/home" }) {
       id
       name
       content
