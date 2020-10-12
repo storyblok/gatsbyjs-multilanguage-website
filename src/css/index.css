@@ -15,6 +15,10 @@
     @apply py-0;
 }
 
+.bg-white-half {
+    background: linear-gradient(to bottom, #fff 0%, #fff 50%, transparent 50%)
+}
+
 blockquote {
     @apply text-3xl;
     @apply text-primary;
