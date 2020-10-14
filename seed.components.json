@@ -1,0 +1,417 @@
+{
+  "components": [
+    {
+      "name": "article-teaser",
+      "display_name": "",
+      "created_at": "2020-10-12T11:31:55.603Z",
+      "updated_at": "2020-10-12T12:10:44.099Z",
+      "id": 1141839,
+      "schema": {
+        "article": {
+          "type": "multilink",
+          "restrict_content_types": true,
+          "component_whitelist": [
+            "blogpost"
+          ]
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "article-teaser",
+      "component_group_uuid": null
+    },
+    {
+      "name": "author",
+      "display_name": null,
+      "created_at": "2020-10-12T14:32:59.399Z",
+      "updated_at": "2020-10-12T14:33:25.708Z",
+      "id": 1142047,
+      "schema": {
+        "name": {
+          "type": "text"
+        },
+        "description": {
+          "type": "text"
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": true,
+      "preview_tmpl": null,
+      "is_nestable": false,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "author",
+      "component_group_uuid": null
+    },
+    {
+      "name": "blogpost",
+      "display_name": null,
+      "created_at": "2020-10-12T12:16:44.526Z",
+      "updated_at": "2020-10-12T14:34:18.773Z",
+      "id": 1141861,
+      "schema": {
+        "title": {
+          "type": "text",
+          "required": true,
+          "max_length": "500",
+          "pos": 0
+        },
+        "image": {
+          "type": "image",
+          "image_crop": true,
+          "keep_image_size": true,
+          "image_width": "16",
+          "image_height": "9",
+          "pos": 1
+        },
+        "intro": {
+          "type": "textarea",
+          "pos": 2
+        },
+        "long_text": {
+          "type": "richtext",
+          "pos": 3
+        },
+        "author": {
+          "type": "option",
+          "use_uuid": true,
+          "source": "internal_stories",
+          "pos": 4,
+          "folder_slug": "authors"
+        },
+        "related": {
+          "type": "bloks",
+          "maximum": "1",
+          "restrict_components": true,
+          "component_whitelist": [
+            "featured-articles"
+          ]
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": true,
+      "preview_tmpl": null,
+      "is_nestable": false,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "blogpost",
+      "component_group_uuid": null
+    },
+    {
+      "name": "feature",
+      "display_name": null,
+      "created_at": "2020-10-12T08:29:52.639Z",
+      "updated_at": "2020-10-12T14:42:58.548Z",
+      "id": 1141618,
+      "schema": {
+        "name": {
+          "type": "text",
+          "pos": 1
+        },
+        "description": {
+          "type": "textarea",
+          "pos": 2
+        },
+        "icon": {
+          "type": "option",
+          "pos": 3,
+          "options": [
+            {
+              "value": "twitter",
+              "name": "twitter"
+            },
+            {
+              "value": "phone",
+              "name": "phone"
+            },
+            {
+              "value": "mail",
+              "name": "mail"
+            }
+          ],
+          "use_uuid": true
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [
+        {
+          "id": 750755,
+          "name": "mail support",
+          "component_id": 1141618,
+          "image": ""
+        },
+        {
+          "id": 750756,
+          "name": "phone support",
+          "component_id": 1141618,
+          "image": ""
+        }
+      ],
+      "preset_id": null,
+      "real_name": "feature",
+      "component_group_uuid": ""
+    },
+    {
+      "name": "featured-articles",
+      "display_name": null,
+      "created_at": "2020-10-12T11:37:18.013Z",
+      "updated_at": "2020-10-12T11:40:40.976Z",
+      "id": 1141841,
+      "schema": {
+        "title": {
+          "type": "text",
+          "pos": 0
+        },
+        "articles": {
+          "type": "bloks",
+          "restrict_components": true,
+          "component_whitelist": [
+            "article-teaser"
+          ],
+          "pos": 1
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "featured-articles",
+      "component_group_uuid": null
+    },
+    {
+      "name": "grid",
+      "display_name": null,
+      "created_at": "2020-10-12T08:29:52.925Z",
+      "updated_at": "2020-10-12T11:35:25.312Z",
+      "id": 1141619,
+      "schema": {
+        "columns": {
+          "type": "bloks",
+          "restrict_components": true,
+          "component_whitelist": [
+            "feature",
+            "article-teaser"
+          ],
+          "maximum": "100",
+          "required": true,
+          "pos": 1,
+          "description": "",
+          "display_name": "",
+          "default_value": "",
+          "restrict_type": ""
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "grid",
+      "component_group_uuid": ""
+    },
+    {
+      "name": "NavItem",
+      "display_name": null,
+      "created_at": "2020-10-12T08:29:51.742Z",
+      "updated_at": "2020-10-12T08:29:51.742Z",
+      "id": 1141615,
+      "schema": {
+        "name": {
+          "type": "text"
+        },
+        "link": {
+          "type": "multilink"
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "NavItem",
+      "component_group_uuid": null
+    },
+    {
+      "name": "nested_component",
+      "display_name": null,
+      "created_at": "2020-10-12T08:29:51.156Z",
+      "updated_at": "2020-10-12T08:29:51.156Z",
+      "id": 1141613,
+      "schema": {
+        "test": {
+          "type": "text"
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": true,
+      "preview_tmpl": null,
+      "is_nestable": false,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "nested_component",
+      "component_group_uuid": null
+    },
+    {
+      "name": "page",
+      "display_name": null,
+      "created_at": "2020-10-12T08:29:53.492Z",
+      "updated_at": "2020-10-12T08:29:53.492Z",
+      "id": 1141621,
+      "schema": {
+        "body": {
+          "type": "bloks",
+          "restrict_components": true,
+          "component_whitelist": [
+            "grid",
+            "teaser",
+            "featured-articles"
+          ],
+          "maximum": "1000"
+        },
+        "title": {
+          "type": "text"
+        },
+        "meta": {
+          "type": "custom",
+          "field_type": "seo-metatags",
+          "options": []
+        },
+        "option1": {
+          "type": "option",
+          "use_uuid": true,
+          "source": "internal_stories",
+          "folder_slug": "test/"
+        },
+        "options2": {
+          "type": "options",
+          "source": "internal_stories",
+          "folder_slug": "test/"
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": true,
+      "preview_tmpl": null,
+      "is_nestable": false,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "page",
+      "component_group_uuid": ""
+    },
+    {
+      "name": "page2",
+      "display_name": null,
+      "created_at": "2020-10-12T08:29:50.888Z",
+      "updated_at": "2020-10-12T08:29:50.888Z",
+      "id": 1141612,
+      "schema": {
+        "options": {
+          "type": "option",
+          "use_uuid": true,
+          "source": "internal_stories",
+          "folder_slug": "test/"
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": true,
+      "preview_tmpl": null,
+      "is_nestable": false,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "page2",
+      "component_group_uuid": null
+    },
+    {
+      "name": "settings",
+      "display_name": null,
+      "created_at": "2020-10-12T08:29:52.007Z",
+      "updated_at": "2020-10-12T08:29:52.007Z",
+      "id": 1141616,
+      "schema": {
+        "main_navi": {
+          "type": "bloks"
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": true,
+      "preview_tmpl": null,
+      "is_nestable": false,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "settings",
+      "component_group_uuid": null
+    },
+    {
+      "name": "slide",
+      "display_name": null,
+      "created_at": "2020-10-12T08:29:52.316Z",
+      "updated_at": "2020-10-12T08:29:52.316Z",
+      "id": 1141617,
+      "schema": {
+        "image": {
+          "type": "image"
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "slide",
+      "component_group_uuid": null
+    },
+    {
+      "name": "teaser",
+      "display_name": null,
+      "created_at": "2020-10-12T08:29:53.197Z",
+      "updated_at": "2020-10-12T08:32:59.573Z",
+      "id": 1141620,
+      "schema": {
+        "headline": {
+          "type": "text",
+          "pos": 0
+        },
+        "intro_text": {
+          "type": "richtext",
+          "pos": 1
+        },
+        "body": {
+          "type": "bloks",
+          "pos": 2
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "teaser",
+      "component_group_uuid": null
+    }
+  ]
+}
