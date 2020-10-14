@@ -4,16 +4,27 @@ import Layout from "../components/Layout"
 import StoryblokService from '../utils/storyblok-service'
 
 export default class extends React.Component {
-  componentDidMount() {
-    StoryblokService.initEditor(this)
+  state = {
+    story: {
+      content: JSON.parse(this.props.pageContext.story.content)
+    }
+  }
+
+  async getInitialStory() {
+    let { data: { story } } = await StoryblokService.get(`cdn/stories/${this.props.pageContext.story.full_slug}`)
+    return story
+  }
+
+  async componentDidMount() {
+    let story = await this.getInitialStory()
+    if(story.content) this.setState({ story })
+    setTimeout(() => StoryblokService.initEditor(this), 200)
   }
 
   render() {
-    const content = JSON.parse(this.props.pageContext.story.content)
-
     return (
       <Layout>
-        <DynamicComponent blok={content} key={this.props.pageContext.story._uid} />
+        <DynamicComponent blok={this.state.story.content} key={this.props.pageContext.story._uid} />
       </Layout>
     )
   }

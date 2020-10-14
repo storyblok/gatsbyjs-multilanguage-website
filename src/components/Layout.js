@@ -4,9 +4,7 @@ import Footer from './Footer'
 import { Helmet } from 'react-helmet'
 import { useStaticQuery, graphql } from "gatsby"
 
-import config from '../../gatsby-config'
-let sbConfigs = config.plugins.filter((item) => (item.resolve === 'gatsby-source-storyblok'))
-let sbConfig = sbConfigs.length > 0 ? sbConfigs[0] : {}
+import StoryblokService from '../utils/storyblok-service'
 
 export default function Layout({ children }){
   const { settings } = useStaticQuery(graphql`
@@ -33,7 +31,16 @@ export default function Layout({ children }){
     <div className="bg-gray-300">
       <Helmet
           script={[
-            {"src": `//app.storyblok.com/f/storyblok-latest.js?t=${sbConfig.options.accessToke}`, "type": "text/javascript"}
+            {"src": `//app.storyblok.com/f/storyblok-latest.js?t=${StoryblokService.token}`, 
+            "type": "text/javascript"}
+          ]}
+      />
+      <Helmet
+          script={[
+            {
+            "innerHTML": `var StoryblokCacheVersion = '${StoryblokService.getCacheVersion()}';`,
+            "type": "text/javascript"
+            }
           ]}
       />
       <Navigation settings={parsedSetting} lang={isLanguage} />

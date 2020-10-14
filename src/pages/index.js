@@ -5,34 +5,38 @@ import { graphql } from 'gatsby'
 import StoryblokService from '../utils/storyblok-service'
 
 export default class extends React.Component {
-  componentDidMount() {
-    StoryblokService.initEditor(this)
+  state = {
+    story: {
+      content: JSON.parse(this.props.data.story.content)
+    }
+  }
+
+  async getInitialStory() {
+    let { data: { story } } = await StoryblokService.get(`cdn/stories/${this.props.data.story.full_slug}`)
+    return story
+  }
+
+  async componentDidMount() {
+    let story = await this.getInitialStory()
+    if(story.content) this.setState({ story })
+    setTimeout(() => StoryblokService.initEditor(this), 200)
   }
 
   render() {
-    if (typeof this.props.data == 'undefined') {
-      return (<h2>No Connection to Storyblok</h2>)
-    }
-
-    const contentOfStory = JSON.parse(this.props.data.storyblokEntry.content)
-    console.log(contentOfStory)
-
     return (
       <Layout>
-        <Page blok={contentOfStory} />
+        <Page blok={this.state.story.content} />
       </Layout>
     )
   }
 }
 
 export const query = graphql`
-  query {
-    storyblokEntry(full_slug: { eq: "home" }) {
-      id
+  {
+    story: storyblokEntry(full_slug: { eq: "home" }) {
       name
       content
-      lang
-      slug
+      full_slug
       uuid
     }
   }

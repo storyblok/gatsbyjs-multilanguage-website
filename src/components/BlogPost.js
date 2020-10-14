@@ -5,7 +5,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import DynamicComponent from './DynamicComponent'
 
 const BlogPost = ({ blok }) => {
-  const related = blok.related && (<DynamicComponent blok={blok.related[0]} key={blok.related[0]._uid}/>)
+  const related = blok.related && blok.related.length ? (<DynamicComponent blok={blok.related[0]} key={blok.related[0]._uid}/>) : null
   const { authors } = useStaticQuery(graphql`
   {
     authors: allStoryblokEntry(filter: {field_component: {eq: "author"}}) {

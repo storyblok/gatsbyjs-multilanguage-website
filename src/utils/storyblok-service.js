@@ -1,21 +1,64 @@
+import StoryblokClient from 'storyblok-js-client'
+import config from '../../gatsby-config'
+const sbConfig = config.plugins.filter((item) => item.resolve === 'gatsby-source-storyblok')[0]
+
 class StoryblokService {
+  constructor() {
+    this.devMode = true
+    this.token = sbConfig.options.accessToken
+    this.client = new StoryblokClient({
+      accessToken: this.token,
+      cache: {
+        clear: 'auto',
+        type: 'memory'
+      }
+    })
+    this.query = {}
+  }
+
+  getCacheVersion() {
+    return this.client.cacheVersion
+  }
+
+  get(slug, params) {
+    params = params || {}
+
+    if (this.getQuery('_storyblok') || this.devMode || (typeof window !== 'undefined' && window.storyblok)) {
+      params.version = 'draft'
+    }
+
+    if (typeof window !== 'undefined' && typeof window.StoryblokCacheVersion !== 'undefined') {
+      params.cv = window.StoryblokCacheVersion
+    }
+
+    return this.client.get(slug, params)
+  }
+
   initEditor(reactComponent) {
     if (window.storyblok) {
       window.storyblok.init()
-      // window.storyblok.on(['change', 'published'], () => location.reload(true))
+      window.storyblok.on(['change', 'published'], () => window.location.reload(true))
 
       // this will alter the state and replaces the current story with a current raw story object (no resolved relations or links)
       window.storyblok.on('input', (event) => {
-        if (event.story.content._uid === reactComponent.state.story.content._uid) {
-          reactComponent.setState({
-            story: {
-              ...event.story,
-              content: window.storyblok.addComments(event.story.content, event.story.id)
-            }
+        if (event.story && event.story.content._uid === reactComponent.state.story.content._uid) {
+          event.story.content = window.storyblok.addComments(event.story.content, event.story.id)
+          window.storyblok.resolveRelations(event.story, ['featured-articles.articles'], () => {
+            reactComponent.setState({
+              story: event.story
+            })
           })
         }
       })
     }
+  }
+
+  setQuery(query) {
+    this.query = query
+  }
+
+  getQuery(param) {
+    return this.query[param]
   }
 }
 
