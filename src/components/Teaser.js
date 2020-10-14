@@ -4,7 +4,6 @@ import SbEditable from 'storyblok-react'
 import DynamicComponent from "./DynamicComponent"
 
 const Teaser = ({ blok }) => { 
-  console.log(blok)
   const body = blok &&
   blok.body &&
   blok.body.map(childBlok => <DynamicComponent blok={childBlok} key={childBlok._uid}/>)
