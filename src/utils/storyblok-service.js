@@ -1,6 +1,6 @@
 import StoryblokClient from 'storyblok-js-client'
 import config from '../../gatsby-config'
-const sbConfig = config.plugins.filter((item) => item.resolve === 'gatsby-source-storyblok')[0]
+const sbConfig = config.plugins.find((item) => item.resolve === 'gatsby-source-storyblok')
 
 class StoryblokService {
   constructor() {
