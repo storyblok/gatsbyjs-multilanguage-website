@@ -7,7 +7,7 @@ import StoryblokService from '../utils/storyblok-service'
 export default class extends React.Component {
   state = {
     story: {
-      content: JSON.parse(this.props.data.story.content)
+      content: this.props.data.story ? JSON.parse(this.props.data.story.content) : {}
     }
   }
 
@@ -24,7 +24,7 @@ export default class extends React.Component {
 
   render() {
     return (
-      <Layout>
+      <Layout location={this.props.location}>
         <Page blok={this.state.story.content} />
       </Layout>
     )
