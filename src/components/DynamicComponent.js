@@ -7,6 +7,7 @@ import Slide from './Slide'
 import Placeholder from './Placeholder'
 import ArticleTeaser from './ArticleTeaser'
 import FeaturedArticles from './FeaturedArticles'
+import PostsList from './PostsList'
 
 const Components = {
   'teaser': Teaser,
@@ -15,7 +16,8 @@ const Components = {
   'blogpost': BlogPost,
   'slide': Slide,
   'article-teaser': ArticleTeaser,
-  'featured-articles': FeaturedArticles
+  'featured-articles': FeaturedArticles,
+  'posts-list': PostsList
 }
 
 const DynamicComponent = ({blok}) => {

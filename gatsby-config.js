@@ -14,7 +14,7 @@ module.exports = {
     options: {
       accessToken: 'vGsNXj86XGJjyO7bFWw8Mgtt',
       homeSlug: 'home',
-      version: process.env.NODE_ENV === 'production' ? 'published' : 'draft'
+      version: process.env.NODE_ENV === 'production' ? 'draft' : 'draft'
     }
   },
   {
@@ -26,6 +26,15 @@ module.exports = {
       ],
       display: 'swap'
     }
+  },
+  {
+    resolve: `gatsby-plugin-i18n`,
+    options: {
+      langKeyDefault: 'en',
+      langKeyForNull: 'en',
+      prefixDefault: false,
+      useLangKeyLayout: false,
+    },
   }
 ],
 }

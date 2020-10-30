@@ -36,7 +36,7 @@ const Nav = ({ settings, lang }) => (
               settings.content.main_navi.map((navitem, index) => (
                 <SbEditable content={navitem} key={navitem._uid}>
                 <li key={index}>
-                  <Link to={navitem.link.cached_url} prefetch="true" className="block px-4 py-1 md:p-2 lg:px-8">
+                  <Link to={`/${navitem.link.cached_url.replace("en/", "").replace("home", "")}`} prefetch="true" className="block px-4 py-1 md:p-2 lg:px-8">
                     {navitem.name}
                   </Link>
                 </li>
