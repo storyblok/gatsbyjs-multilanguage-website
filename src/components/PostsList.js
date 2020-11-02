@@ -1,13 +1,12 @@
 import React from "react"
 import SbEditable from "storyblok-react"
 
-const FeaturedArticles = ({ blok }) => {
+const PostsList = ({ blok }) => {
   return (
     <SbEditable content={blok} key={blok._uid}>
       <div className="container mx-auto">
       <ul>
         {blok.posts.map(post => {
-          const lang = post.lang === "default" ? "/en" : `/${post.lang}`
           return (
             <li
               key={post._uid}
@@ -47,4 +46,4 @@ const FeaturedArticles = ({ blok }) => {
   )
 }
 
-export default FeaturedArticles
+export default PostsList
