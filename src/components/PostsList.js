@@ -24,7 +24,7 @@ const FeaturedArticles = ({ blok }) => {
               <div className="mt-2">
                 <a
                   className="text-2xl text-gray-700 font-bold hover:text-gray-600"
-                  href={`${lang}/blog/${post.slug}`}
+                  href={`/${post.full_slug}`}
                 >
                   {post.content.title}
                 </a>
@@ -33,7 +33,7 @@ const FeaturedArticles = ({ blok }) => {
               <div className="flex justify-between items-center mt-4">
                 <a
                   className="text-blue-600 hover:underline"
-                  href={`${lang}/blog/${post.slug}`}
+                  href={`/${post.full_slug}`}
                 >
                   Read more
                 </a>
