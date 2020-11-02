@@ -2,6 +2,8 @@
 
 This is the demo project for the [step by step guide for Gatsby and Storyblok](**https://www.storyblok.com/tp/gatsby-multilanguage-website-tutorial**). 
 
+Demo: <https://gatsby-multilanguage-website.vercel.app/>
+
 <img src="https://img.storyblok.com/ZvYBhnjPopyB4ExBdo94o-UxnXc=/840x0/f/88751/2880x2048/47fb3aa687/gatsbyjs_demo.jpg" width="400px" />
 
 

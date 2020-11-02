@@ -250,27 +250,6 @@
       "component_group_uuid": null
     },
     {
-      "name": "nested_component",
-      "display_name": null,
-      "created_at": "2020-10-12T08:29:51.156Z",
-      "updated_at": "2020-10-12T08:29:51.156Z",
-      "id": 1141613,
-      "schema": {
-        "test": {
-          "type": "text"
-        }
-      },
-      "image": null,
-      "preview_field": null,
-      "is_root": true,
-      "preview_tmpl": null,
-      "is_nestable": false,
-      "all_presets": [],
-      "preset_id": null,
-      "real_name": "nested_component",
-      "component_group_uuid": null
-    },
-    {
       "name": "page",
       "display_name": null,
       "created_at": "2020-10-12T08:29:53.492Z",
@@ -318,27 +297,27 @@
       "component_group_uuid": ""
     },
     {
-      "name": "page2",
+      "name": "posts-list",
       "display_name": null,
-      "created_at": "2020-10-12T08:29:50.888Z",
-      "updated_at": "2020-10-12T08:29:50.888Z",
-      "id": 1141612,
+      "created_at": "2020-10-30T10:58:14.600Z",
+      "updated_at": "2020-10-30T13:32:16.244Z",
+      "id": 1171060,
       "schema": {
-        "options": {
-          "type": "option",
-          "use_uuid": true,
+        "posts": {
+          "type": "options",
           "source": "internal_stories",
-          "folder_slug": "test/"
+          "folder_slug": "",
+          "filter_content_type": "blogpost"
         }
       },
       "image": null,
       "preview_field": null,
-      "is_root": true,
+      "is_root": false,
       "preview_tmpl": null,
-      "is_nestable": false,
+      "is_nestable": true,
       "all_presets": [],
       "preset_id": null,
-      "real_name": "page2",
+      "real_name": "posts-list",
       "component_group_uuid": null
     },
     {

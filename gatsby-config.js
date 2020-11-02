@@ -14,7 +14,7 @@ module.exports = {
     options: {
       accessToken: 'vGsNXj86XGJjyO7bFWw8Mgtt',
       homeSlug: 'home',
-      version: process.env.NODE_ENV === 'production' ? 'draft' : 'draft'
+      version: process.env.NODE_ENV === 'production' ? 'production' : 'draft'
     }
   },
   {
