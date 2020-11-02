@@ -25,7 +25,8 @@ const DynamicComponent = ({blok}) => {
     const Component = Components[blok.component]
     return <Component blok={blok} key={blok._uid}/>
   }
-  return <Placeholder componentName={blok.component}/>
+ 
+  return  blok.component ? <Placeholder componentName={blok.component}/> : null
 }
 
 export default DynamicComponent

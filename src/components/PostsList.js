@@ -9,7 +9,7 @@ const PostsList = ({ blok }) => {
         {blok.posts.map(post => {
           return (
             <li
-              key={post._uid}
+              key={post.name}
               className="max-w-4xl px-10 my-4 py-6 rounded-lg shadow-md bg-white"
             >
               <div className="flex justify-between items-center">

@@ -13,7 +13,7 @@ const Teaser = ({ blok }) => {
     <div className="bg-white-half">
       <div className="pb-6 pt-16 container mx-auto">
         <h1 className="text-6xl font-bold font-serif text-primary">{ blok.headline }</h1>
-        <p className="text-gray-700 text-lg max-w-lg">{ introText }</p>
+        <div className="text-gray-700 text-lg max-w-lg">{ introText }</div>
       </div>
       <div className="container mx-auto overflow-x-scroll flex w-full my-8 snap-x">
         { body }                

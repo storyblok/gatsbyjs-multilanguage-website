@@ -19,8 +19,9 @@ export default class extends React.Component {
             let content = fullPost ? JSON.parse(fullPost.content) : ""
             return Object.assign({}, fullPost, { content })
         })
-        content.body[index] = joinedPosts   
+        content.body[index].posts = joinedPosts   
     }   
+
     this.state = {
         story: {
           content
