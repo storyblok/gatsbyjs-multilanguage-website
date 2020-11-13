@@ -4,7 +4,7 @@ const sbConfig = config.plugins.find((item) => item.resolve === 'gatsby-source-s
 
 class StoryblokService {
   constructor() {
-    this.devMode = true
+    this.devMode = false
     this.token = sbConfig.options.accessToken
     this.client = new StoryblokClient({
       accessToken: this.token,
@@ -13,7 +13,7 @@ class StoryblokService {
         type: 'memory'
       }
     })
-    this.query = {}
+    this.query = ''
   }
 
   getCacheVersion() {
@@ -36,16 +36,20 @@ class StoryblokService {
 
   initEditor(reactComponent) {
     if (window.storyblok) {
-      window.storyblok.init()
+      window.storyblok.init({
+        accessToken: sbConfig.options.accessToken
+      })
       window.storyblok.on(['change', 'published'], () => window.location.reload(true))
 
-      // this will alter the state and replaces the current story with a current raw story object (no resolved relations or links)
+      // this will alter the state and replaces the current story with a current raw story object
       window.storyblok.on('input', (event) => {
         if (event.story && event.story.content._uid === reactComponent.state.story.content._uid) {
-          event.story.content = window.storyblok.addComments(event.story.content, event.story.id)
+          let commentContent = window.storyblok.addComments(event.story.content, event.story.id)
           window.storyblok.resolveRelations(event.story, ['featured-articles.articles'], () => {
             reactComponent.setState({
-              story: event.story
+              story: {
+                content: commentContent
+              }
             })
           })
         }
@@ -58,7 +62,7 @@ class StoryblokService {
   }
 
   getQuery(param) {
-    return this.query[param]
+    return this.query.includes(param)
   }
 }
 

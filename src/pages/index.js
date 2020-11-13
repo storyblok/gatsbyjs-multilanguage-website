@@ -12,6 +12,7 @@ export default class extends React.Component {
   }
 
   async getInitialStory() {
+    StoryblokService.setQuery(this.props.location.search)
     let { data: { story } } = await StoryblokService.get(`cdn/stories/${this.props.data.story.full_slug}`)
     return story
   }
