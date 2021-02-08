@@ -23,7 +23,7 @@
         "gatsby-plugin-sharp": "^2.6.39",
         "gatsby-source-storyblok": "^1.1.1",
         "gatsby-transformer-sharp": "^2.5.17",
-        "marked": "^1.2.0",
+        "marked": "^2.0.0",
         "postcss": "^8.1.1",
         "postcss-preset-env": "^6.7.0",
         "react": "^16.12.0",
