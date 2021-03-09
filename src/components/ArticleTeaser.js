@@ -33,7 +33,7 @@ export default function ArticleTeaser({ blok }){
 
   return (
       <Link to={`/${article[0].node.full_slug}`} className="py-16 block transition hover:opacity-50">
-        <img src={content.image} className="pb-10 w-full"/>
+        <img src={content.image} alt={content.title} className="pb-10 w-full"/>
         <h2 className="pb-6 text-lg font-bold">{content.title}</h2>
         <p className="pb-6 text-gray-700 leading-loose">{content.intro}</p>
         <p className="text-gray-700">{authorContent.name}</p>

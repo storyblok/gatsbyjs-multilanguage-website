@@ -4,7 +4,7 @@ import Layout from "../components/Layout"
 import { graphql } from 'gatsby'
 import StoryblokService from '../utils/storyblok-service'
 
-export default class extends React.Component {
+export default class Blog extends React.Component {
   constructor(props) {
     super(props);
 

@@ -7,7 +7,9 @@
 module.exports = {
   /* Your site config here */
   plugins: [
-    'gatsby-transformer-sharp',
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     'gatsby-plugin-postcss',
     {
     resolve: 'gatsby-source-storyblok',

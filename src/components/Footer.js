@@ -1,5 +1,4 @@
 import React from "react"
-import SbEditable from "storyblok-react"
 
 const Footer = () => {
   return (
