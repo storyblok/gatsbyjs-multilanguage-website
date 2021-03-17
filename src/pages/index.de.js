@@ -4,7 +4,7 @@ import Layout from "../components/Layout"
 import { graphql } from 'gatsby'
 import StoryblokService from '../utils/storyblok-service'
 
-export default class extends React.Component {
+export default class PageIndexDe extends React.Component {
   state = {
     story: {
       content: this.props.data.story ? JSON.parse(this.props.data.story.content) : {}

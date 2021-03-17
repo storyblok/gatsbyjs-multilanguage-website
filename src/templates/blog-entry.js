@@ -3,7 +3,7 @@ import DynamicComponent from "../components/DynamicComponent"
 import Layout from "../components/Layout"
 import StoryblokService from '../utils/storyblok-service'
 
-export default class extends React.Component {
+export default class BlogEntry extends React.Component {
   state = {
     story: {
       content: JSON.parse(this.props.pageContext.story.content)
