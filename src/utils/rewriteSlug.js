@@ -1,4 +1,4 @@
-function rewriteSlugs(slug) {
+function rewriteSlug(slug) {
     const defaultLanguage = 'en/'
     let newSlug = slug
     // replaces /de/home with /de
@@ -9,4 +9,4 @@ function rewriteSlugs(slug) {
 }
 
 // es5 export because of import into gatsby-node.js
-module.exports = rewriteSlugs
+module.exports = rewriteSlug
