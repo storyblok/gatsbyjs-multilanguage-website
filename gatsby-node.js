@@ -1,15 +1,38 @@
 const path = require('path')
 
+function rewriteSlug(slug) {
+  const defaultLanguage = 'en/'
+  let newSlug = slug
+  // replaces /de/home with /de
+  newSlug = newSlug.replace('home', '')
+  // replaces /en/blog/first-post with /blog/first-post
+  newSlug = newSlug.replace(defaultLanguage, '')
+  return newSlug
+}
+
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
   return new Promise((resolve, reject) => {
-    const storyblokEntry = path.resolve('src/templates/blog-entry.js')
+    const blogPostTemplate = path.resolve('src/templates/blog-entry.js')
+    const pageTemplate = path.resolve('src/templates/page.js')
 
     resolve(
       graphql(
         `{
-          stories: allStoryblokEntry(filter: {field_component: {eq: "blogpost"}}) {
+          posts: allStoryblokEntry(filter: {field_component: {eq: "blogpost"}}) {
+            edges {
+              node {
+                id
+                name
+                slug
+                field_component
+                full_slug
+                content
+              }
+            }
+          }
+          pages: allStoryblokEntry(filter: {field_component: {eq: "page"}}) {
             edges {
               node {
                 id
@@ -28,12 +51,26 @@ exports.createPages = ({ graphql, actions }) => {
           reject(result.errors)
         }
 
-        const entries = result.data.stories.edges
+        const allPosts = result.data.posts.edges
+        const allPages = result.data.pages.edges
 
-        entries.forEach((entry) => {
+        allPosts.forEach((entry) => {
+          const slug = rewriteSlug(entry.node.full_slug)
           const page = {
-            path: `/${entry.node.full_slug}`,
-            component: storyblokEntry,
+            path: `/${slug}`,
+            component: blogPostTemplate,
+            context: {
+              story: entry.node
+            }
+          }
+          createPage(page)
+        })
+
+        allPages.forEach((entry) => {
+          let slug = rewriteSlug(entry.node.full_slug)
+          const page = {
+            path: `/${slug}`,
+            component: pageTemplate,
             context: {
               story: entry.node
             }
