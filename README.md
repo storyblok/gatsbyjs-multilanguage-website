@@ -20,7 +20,7 @@ $ npm run develop # or yarn dev
 ## Setup
 
 1. [Register](https://app.storyblok.com/#!/signup) at Storyblok for free.
-2. Create a new Space and exchange the preview token with your own.
+2. Duplicate Example Space by clicking this link: <https://app.storyblok.com/#!/build/95016>
 3. Follow our [Gatsby Storyblok Guide](**https://www.storyblok.com/tp/gatsby-multilanguage-website-tutorial**)
 
 For detailed explanation on how things work, checkout the [Gatsby docs](https://www.gatsbyjs.com/) and for the whole Setup you can have a look at [our step by step guide for Gatsby and Storyblok](**https://www.storyblok.com/tp/gatsby-multilanguage-website-tutorial**)
