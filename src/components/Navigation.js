@@ -1,6 +1,7 @@
 import Link from 'gatsby-link'
 import React from "react"
 import SbEditable from 'storyblok-react'
+import rewriteSlug from '../utils/rewriteSlug'
 
 const Nav = ({ settings, lang }) => (
   <header className="w-full bg-white">
@@ -34,13 +35,11 @@ const Nav = ({ settings, lang }) => (
           <ul className="flex flex-col mt-4 -mx-4 pt-4 border-t md:flex-row md:items-center md:mx-0 md:mt-0 md:pt-0 md:mr-4 md:ml-auto lg:mr-8 md:border-0">
             {settings &&
               settings.content.main_navi.map((navitem, index) => (
-                <SbEditable content={navitem} key={navitem._uid}>
                 <li key={index}>
-                  <Link to={`/${navitem.link.cached_url.replace("en/", "").replace("home", "")}`} prefetch="true" className="block px-4 py-1 md:p-2 lg:px-8">
+                  <Link to={`/${rewriteSlug(navitem.link.cached_url)}`} prefetch="true" className="block px-4 py-1 md:p-2 lg:px-8">
                     {navitem.name}
                   </Link>
                 </li>
-                </SbEditable>
               ))}
           </ul>
           <ul className="flex flex-col mt-4 -mx-4 pt-4 border-t md:flex-row md:items-center md:mx-0 md:mt-0 md:pt-0 md:border-0">
