@@ -25,29 +25,6 @@ $ npm run develop # or yarn dev
 
 For detailed explanation on how things work, checkout the [Gatsby docs](https://www.gatsbyjs.com/) and for the whole Setup you can have a look at [our step by step guide for Gatsby and Storyblok](**https://www.storyblok.com/tp/gatsby-multilanguage-website-tutorial**)
 
-## Import necessary components
-
-You can import the example components through the file `seed.components.json` with the [Storyblok CLI](https://github.com/storyblok/storyblok#push-components). For this you will need your space ID, which you can find in your space **settings**.
-
-First you need to install the Storyblok CLI
-
-```bash
-# Install Storyblok CLI if you have not already
-npm install -g storyblok
-```
-
-Then you can push the exisiting `seed.components.json` structure to Storyblok.
-
-```bash
-# how to use
-storyblok push-components <SOURCE> --space <SPACE_ID>
-
-# example
-storyblok push-components ./seed.components.json --space 12345
-```
-
-After the import you will have all the components under `Components` in your left sidebar.
-
 ## Add Content
 
 The following content structure is needed for this boilerplate.
