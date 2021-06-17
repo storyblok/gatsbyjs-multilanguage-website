@@ -7,7 +7,7 @@
 </div>
 
 <p align="center">
-  <a href="">
+  <a href="https://discord.gg/jKrbAMz">
    <img src="https://img.shields.io/discord/700316478792138842?label=Join%20Our%20Discord%20Community&style=flat-square&logo=discord&color=09b3af">
    </a>
 <a href="https://twitter.com/intent/follow?screen_name=storyblok">
