@@ -76,6 +76,10 @@ This repository is published under the [MIT](./LICENSE) license.
 
 ## 🔗 Related Resources
 
-* **[Storyblok PHP Richtext Renderer](https://github.com/storyblok/storyblok-php-richtext-renderer)** : This package allows you to get an HTML string from the richtext field of Storyblok;
+Take a look at all the other [Storyblok's Gatsby Resources on GitHub](https://github.com/search?q=org%3Astoryblok+topic%3Agatsby) or check out our [Gatsby.js Hub](https://www.storyblok.com/tc/gatsbyjs). You can find a selection of our resources here:
 
-* **[Storyblok Laravel Tutorial](https://www.storyblok.com/tp/add-a-headless-cms-to-laravel-in-5-minutes?utm_source=github.com&utm_medium=referral&utm_campaign=php-client)** : Add a Headless CMS to Laravel in 5 minutes.
+* **[Rich Text Renderer for React](https://github.com/claus/storyblok-rich-text-react-renderer)**: Renders Storyblok rich text content to React elements;
+
+* **[Gatsby Storyblok Boilerplate](https://github.com/storyblok/gatsby-storyblok-boilerplate)** : This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React;
+
+* **[Gatsby Source Storyblok](https://github.com/storyblok/gatsby-source-storyblok)** : This is a Gatsby source plugin for building websites using the Storyblok headless CMS with true visual preview as a data source.
