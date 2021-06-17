@@ -62,7 +62,7 @@ The following content structure is needed for this boilerplate.
 
 ## ℹ️ Support
 
-* Bugs or Feature Requests? [Submit an issue](../../issues/new);
+* Bugs or Feature Requests? [Submit an issue](../../../issues/new);
 
 * Do you have questions about Storyblok or you need help? [Join our Discord Community](https://discord.gg/jKrbAMz).
 
