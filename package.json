@@ -3,7 +3,7 @@
     "private": true,
     "description": "A multilanguage example of Storyblok",
     "version": "2.0.0",
-    "license": "0BSD",
+    "license": "MIT",
     "scripts": {
         "build": "gatsby build",
         "develop": "gatsby develop",
