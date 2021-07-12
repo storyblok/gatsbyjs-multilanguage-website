@@ -18,15 +18,15 @@
   </a>
 </p>
 
-## 🚀 Getting Started
+## 🚀 Usage
 
-Demo: <https://gatsby-multilanguage-website.vercel.app/>
+Demo: <https://gatsby-multilanguage-website.vercel.app/>  
 Tutorial: <https://www.storyblok.com/tp/gatsby-multilanguage-website-tutorial>
 
 <img src="https://img.storyblok.com/ZvYBhnjPopyB4ExBdo94o-UxnXc=/840x0/f/88751/2880x2048/47fb3aa687/gatsbyjs_demo.jpg" width="400px" />
 
 
-### Build Setup
+### Run
 
 ``` bash
 # install dependencies
@@ -44,42 +44,20 @@ $ npm run develop # or yarn dev
 
 For detailed explanation on how things work, checkout the [Gatsby docs](https://www.gatsbyjs.com/) and for the whole Setup you can have a look at [our step by step guide for Gatsby and Storyblok](**https://www.storyblok.com/tp/gatsby-multilanguage-website-tutorial**)
 
-### Add Content
+## 🔗 Related Links
 
-The following content structure is needed for this boilerplate.
+* **[Storyblok & Gatsby.js on GitHub](https://github.com/search?q=org%3Astoryblok+topic%3Agatsby)**: Check all of our Gatsby.js open source repos;
+* **[Gatsby.js Hub](https://www.storyblok.com/tc/gatsbyjs)**: Learn how to develop your own Gatsby.js applications that use Storyblok APIs to retrieve and manage content;
+* **[Rich Text Renderer for React](https://github.com/claus/storyblok-rich-text-react-renderer)**: Renders Storyblok rich text content to React elements.
 
-**Content**
+## ℹ️ More Resources
 
-* Home (page)
-* en (folder)
-  * settings (settings)
-  * blog (folder)
-    * first post (blogpost)
-* de (folder)
-  * home (page)
-  * settings (settings)
-  * blog (folder)
-    * erster eintrag (blogpost)
-* authors (folder)
-  * jane doe (author)
-
-
-## ℹ️ Support
+### Support
 
 * Bugs or Feature Requests? [Submit an issue](../../../issues/new);
 
 * Do you have questions about Storyblok or you need help? [Join our Discord Community](https://discord.gg/jKrbAMz).
 
-## 🤝  Contributing
+### Contributing
 
 Please see our [contributing guidelines](https://github.com/storyblok/.github/blob/master/contributing.md) and our [code of conduct](https://www.storyblok.com/trust-center#code-of-conduct).
-
-## 🔗 Related Resources
-
-Take a look at all the other [Storyblok's Gatsby Resources on GitHub](https://github.com/search?q=org%3Astoryblok+topic%3Agatsby) or check out our [Gatsby.js Hub](https://www.storyblok.com/tc/gatsbyjs). You can find a selection of our resources here:
-
-* **[Rich Text Renderer for React](https://github.com/claus/storyblok-rich-text-react-renderer)**: Renders Storyblok rich text content to React elements;
-
-* **[Gatsby Storyblok Boilerplate](https://github.com/storyblok/gatsby-storyblok-boilerplate)** : This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React;
-
-* **[Gatsby Source Storyblok](https://github.com/storyblok/gatsby-source-storyblok)** : This is a Gatsby source plugin for building websites using the Storyblok headless CMS with true visual preview as a data source.
