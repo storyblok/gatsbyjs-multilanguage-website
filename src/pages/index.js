@@ -4,6 +4,7 @@ import Layout from "../components/Layout"
 import { graphql } from 'gatsby'
 import useStoryblok from '../utils/storyblok'
 
+
 export default function PageIndex({ data, location }) {
     const story = useStoryblok(data.story, location)
 
@@ -21,6 +22,10 @@ export const query = graphql`
       content
       full_slug
       uuid
+    },
+    storyblokEntry(full_slug: {eq: "home"}) {
+      content
+      name
     }
   }
 `

@@ -1,15 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 .blend-multiply {
     mix-blend-mode: multiply;
 }
+
+body {
+    font-family: 'Karla', sans-serif;
+   }
 
 .drop-cap:first-letter {
     font-size: 5rem;
     float: left;
     line-height: 2rem;
-    @apply font-serif;
+    @apply font-Karla;
     @apply text-primary;
     @apply mr-4;
     @apply my-8;
@@ -23,7 +30,122 @@ blockquote {
     @apply text-4xl;
     @apply text-primary;
     @apply font-bold;
-    @apply font-serif;
+    @apply font-Karla;
+    /* @apply font-serif; */
     @apply py-12;
     @apply text-center;
 }
+
+/* Checkbox  */
+
+.group {
+    padding: 8px 48px;
+    margin: 8px;
+  }
+
+input[type="checkbox"] {
+    display: none;
+  }
+  
+  label {
+    position: relative;
+  }
+
+  .unchecked {
+    background-color: white;
+    color: black;
+  }
+  
+  .checked {
+    background-color: #66A6BD;
+    color: white;
+  }
+
+/* Navbar dropdown color */
+
+#collasible-nav-dropdown {
+    color: white;
+}
+
+#collasible-nav-dropdown:hover {
+  color: #E0B581;
+}
+
+#no-underline {
+  text-decoration: none;
+}
+
+.no-underline {
+  text-decoration: none;
+}
+
+/* Success Image */
+
+#successImage {
+  
+  width: 182.52px;
+  height: 120px;
+}
+
+#carouselHeight {
+  height: 640px;
+}
+
+.slideHeight {
+  height: 640px;
+}
+
+/* change padding on carousel */
+
+/* .carousel-control-prev-pr-none {
+  padding-right: 20rem 25rem;
+  margin-right: 10rm;
+  background-color: #E0B581;
+} */
+
+/* Old checkbox */
+
+  /* label::before {
+    content: "";
+    background: url("../images/bookDemo/check-circle.svg");
+    background-position: center;
+    background-size: contain;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    left: -32px;
+    top: -4px; */
+
+    /* Try */
+    /* content: "Hola";
+    color: black;
+    background-color: white;
+    background-position: center;
+    background-size: contain;
+    width: 44px;
+    height: 24px;
+    position: absolute;
+    left: -28px;
+    top: 0px;
+    border-radius: 50%; */
+  
+    /* transform: scale(0) rotateZ(180deg);
+    transition: all 0.4s cubic-bezier(0.54, 0.01, 0, 1.49);
+  }
+  
+  input[type="checkbox"]:checked + label::before {
+    transform: scale(1) rotateZ(0deg);
+  } */
+
+  /* input[type="checkbox"]:not(:checked) + label::before {
+    transform: scale(1) rotateZ(0deg);
+    content: "Hola";
+    color: white;
+    background-color: black;
+    width: 44px;
+    height: 24px;
+    position: absolute;
+    left: -28px;
+    top: 0px;
+    border-radius: 50%;
+  } */

@@ -14,7 +14,7 @@ module.exports = {
     {
     resolve: 'gatsby-source-storyblok',
     options: {
-      accessToken: 'vGsNXj86XGJjyO7bFWw8Mgtt',
+      accessToken: 'RCOV1nCjMKbDcFGeymr2oQtt',
       homeSlug: 'home',
       version: process.env.NODE_ENV === 'production' ? 'published' : 'draft'
     }
@@ -23,8 +23,8 @@ module.exports = {
     resolve: `gatsby-plugin-google-fonts`,
     options: {
       fonts: [
-        `Merriweather:400,700`,
-        `Roboto:300,400,400i,700` // you can also specify font weights and styles
+        `Karla:400,400i,700,700i`
+        // `Roboto:300,400,400i,700` // you can also specify font weights and styles
       ],
       display: 'swap'
     }

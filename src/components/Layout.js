@@ -1,7 +1,8 @@
 import React from "react"
-import Navigation from './Navigation'
+import Navigation from './landingPage/navigation'
 import Footer from './Footer'
 import { useStaticQuery, graphql } from "gatsby"
+import NavTwo from "./landingPage/navTwo"
 
 export default function Layout({ children, location, lang }){
   const { settings } = useStaticQuery(graphql`
@@ -27,7 +28,7 @@ export default function Layout({ children, location, lang }){
 
   return (
     <div className="bg-gray-300">
-      <Navigation settings={parsedSetting} lang={activeLanguage} />
+      <NavTwo/>
       <main>
       { children }
       </main>
