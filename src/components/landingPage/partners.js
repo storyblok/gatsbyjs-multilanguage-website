@@ -1,15 +1,15 @@
 import * as React from 'react'
 
-import img1 from '../../images/partners/brand-11.png'
-import img2 from '../../images/partners/brand-22.png'
-import img3 from '../../images/partners/brand-33.png'
-import img4 from '../../images/partners/brand-44.png'
-import img5 from '../../images/partners/brand-55.png'
-import img6 from '../../images/partners/brand-66.png'
+import img1 from '../../images/partners/ricoh.svg'
+import img2 from '../../images/partners/fujifilm.svg'
+import img3 from '../../images/partners/cuscal.svg'
+import img4 from '../../images/partners/morgan.svg'
+import img5 from '../../images/partners/city.svg'
+import img6 from '../../images/partners/fred.svg'
 
 
 const Partners = ({ blok }) => (
-    <section class="bg-white_200 py-16 lg:py-20">
+    <section class="font-karla bg-white py-16 lg:py-20">
         <div class="container">
             <div class="w-full lg:w-8/12 mx-auto text-center mb-16">
                 <h2 class="text-black font-bold text-3xl leading-none mb-20">Our partnerts, making a difference</h2>

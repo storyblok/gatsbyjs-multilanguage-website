@@ -42,7 +42,7 @@ const PostsList = ({ blok }) => {
   const arrayOfPosts = isResolved ? blok.posts : filteredPosts
   return (
     <SbEditable content={blok} key={blok._uid}>
-      <div className="container mx-auto">
+      <div className="font-karla container mx-auto">
       <ul className="flex flex-col justify-center items-center">
         {arrayOfPosts.map(post => {
           return (

@@ -3,12 +3,26 @@ module.exports = {
   purge: ["./src/**/*.js", "./src/**/*.jsx", "./src/**/*.ts", "./src/**/*.tsx"],
   theme: {
     fontFamily: {
-      'body': ['"Karla"'],
-      'Karla': '400,400i,700,700i',
-      'Karla': 'sans-serif',
-      'sans': 'sans-serif',
-      'serif': 'Merriweather, Georgia, serif',
+      body: ["Karla", "sans-serif"],
+      'karla': 'Karla, sans-serif',
+       // karla: ['Karla'],
+      // 'karla': '400,400i,700,700i'
+      // karla: ['Karla'],
+      // 'Karla': 'sans-serif',
+      // 'sans': 'sans-serif',
+      // 'serif': 'Merriweather, Georgia, serif',
     },
+    fontWeight: {
+      hairline: 100,
+      thin: 200,
+      light: 300,
+      normal: 400,
+      medium: 500,
+      semibold: 600,
+      bold: 700,
+      extrabold: 800,
+      black: 900,
+     },
     extend: {
       colors: {
         'primary': '#672E9B',

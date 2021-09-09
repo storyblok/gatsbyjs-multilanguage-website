@@ -3,7 +3,7 @@ import * as React from "react";
 // import Banner from '../../images/whyTriiyo/banner.png'
 
 const IntroWhy = ({ blok }) => (
-    <div className="py-20 bg-cream/100 w-full h-390px">
+    <div className="font-karla py-20 bg-cream/100 w-full h-390px">
         <section>
             <div className="container">
                 <div class="sm:w-8/12 mx-auto text-center mb-16">

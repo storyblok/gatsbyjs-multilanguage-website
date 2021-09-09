@@ -4,6 +4,8 @@ import Layout from "../components/Layout"
 import { graphql } from 'gatsby'
 import useStoryblok from '../utils/storyblok'
 
+// import 'bootstrap/dist/css/bootstrap.min.css'
+
 
 export default function PageIndex({ data, location }) {
     const story = useStoryblok(data.story, location)

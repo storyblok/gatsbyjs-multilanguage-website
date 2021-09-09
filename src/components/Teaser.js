@@ -11,7 +11,7 @@ const Teaser = ({ blok }) => {
   const key = typeof blok._editable !== 'undefined' ? blok._uid + '-edit' : blok._uid
   return (
   <SbEditable content={blok} key={key}>
-    <div className="bg-white-half">
+    <div className="font-karla bg-white-half">
       <div className="pb-6 pt-16 container mx-auto">
         <h1 className="text-6xl font-bold font-serif text-primary">{ blok.headline }</h1>
         <div className="text-gray-700 text-lg max-w-lg">{ introText }</div>

@@ -2,21 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-
 .blend-multiply {
     mix-blend-mode: multiply;
 }
 
-body {
-    font-family: 'Karla', sans-serif;
-   }
+html, body {
+  font-family: "Karla", sans-serif;
+}
+
+   /* Old Blog Post Page */
 
 .drop-cap:first-letter {
     font-size: 5rem;
     float: left;
     line-height: 2rem;
-    @apply font-Karla;
+    /* @apply font-karla; */
     @apply text-primary;
     @apply mr-4;
     @apply my-8;
@@ -30,7 +30,7 @@ blockquote {
     @apply text-4xl;
     @apply text-primary;
     @apply font-bold;
-    @apply font-Karla;
+    /* @apply font-karla; */
     /* @apply font-serif; */
     @apply py-12;
     @apply text-center;
@@ -94,6 +94,13 @@ input[type="checkbox"] {
 .slideHeight {
   height: 640px;
 }
+
+#responsive-navbar-nav {
+  justify-content: flex;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import "@fontsource/karla";
 
 /* change padding on carousel */
 

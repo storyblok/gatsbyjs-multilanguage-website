@@ -94,7 +94,7 @@ const BookDemoForm = () => {
     }
 
     return (
-        <section className="py-20 bg-white">
+        <section className="font-karla py-20 bg-white">
         <div className="container">
             <div className="p-5 space-y-5 ">
                 <h4 className="text-center text-3xl">We can’t wait to show you triiyo!</h4>

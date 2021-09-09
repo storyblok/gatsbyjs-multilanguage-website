@@ -3,7 +3,7 @@ import img1 from '../../images/bookDemo/confirmation.svg'
 
 
 const ContactSuccess = ({ blok }) => (
-    <section class="py-20 bg-white_100">
+    <section class="font-karla py-20 bg-white_100">
 		<div class="container pt-20 pb-20">
 			<div class="sm:w-8/12 mx-auto text-center mt-12 mb-8">
                 <img id="successImage" class="mx-auto w-20 mb-4" src= {img1} alt=""/>                

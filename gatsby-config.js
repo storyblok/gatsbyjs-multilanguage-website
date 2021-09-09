@@ -1,11 +1,10 @@
 /**
- * Configure your Gatsby site with this file.
- *
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
  */
 
+
+
 module.exports = {
-  /* Your site config here */
   plugins: [
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
@@ -23,7 +22,8 @@ module.exports = {
     resolve: `gatsby-plugin-google-fonts`,
     options: {
       fonts: [
-        `Karla:400,400i,700,700i`
+        `Karla`,
+        // `karla`,
         // `Roboto:300,400,400i,700` // you can also specify font weights and styles
       ],
       display: 'swap'
@@ -37,6 +37,6 @@ module.exports = {
       prefixDefault: false,
       useLangKeyLayout: false,
     },
-  }
+  },
 ],
 }

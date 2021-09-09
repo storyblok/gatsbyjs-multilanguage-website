@@ -3,7 +3,7 @@ import logo from '../images/logo.png'
 
 const Footer = () => {
   return (
-    <footer className="text-center bg-navy flex flex-col items-center py-20 mx-auto">
+    <footer className="font-karla text-center bg-navy flex flex-col items-center py-20 mx-auto">
         <div className="lg:w-2/12 text-center lg:text-left">
             <a href="/" className="block">
                 <img className="w-20 inline-block mx-auto" src= {logo} alt=""></img>

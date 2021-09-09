@@ -3,7 +3,7 @@ import * as React from "react";
 import Video from '../video';
 
 const VideoWhy = ({ blok }) => (
-	<section class="bg-navy_300 py-20">
+	<section class="font-karla bg-navy_300 py-20">
         <div class="mx-auto md:w-7/12">
 			<div class="container_sm px-8 pt-20 bg-white">
                     <Video

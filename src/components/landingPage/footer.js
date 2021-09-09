@@ -2,8 +2,8 @@ import * as React from "react";
 
 import logo from '../../images/logo.png'
 
-const Footer = ({ blok }) => (
-	<footer className="bg-navy py-10 lg:py-4">
+const Footer2 = ({ blok }) => (
+	<footer className="font-karla bg-navy py-10 lg:py-4">
     <div className="container_footer">
         <div className="lg:flex flex-wrap items-center justify-between">
             <div className="lg:w-2/12 text-center">
@@ -85,4 +85,4 @@ const Footer = ({ blok }) => (
 </footer>
 )
 
-export default Footer 
+export default Footer2 

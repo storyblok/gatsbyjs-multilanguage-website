@@ -3,6 +3,7 @@ import SbEditable from "storyblok-react"
 import { render } from "storyblok-rich-text-react-renderer"
 import { useStaticQuery, graphql } from "gatsby"
 import DynamicComponent from './DynamicComponent'
+import "@fontsource/karla";
 
 const BlogPost = ({ blok }) => {
   const related = blok.related && blok.related.length ? (<DynamicComponent blok={blok.related[0]} key={blok.related[0]._uid}/>) : null
@@ -25,7 +26,7 @@ const BlogPost = ({ blok }) => {
 
   return (
     <SbEditable content={blok} key={blok._uid}>
-      <div className="bg-white w-full">
+      <div className="font-karla bg-white w-full">
         <div className="max-w-3xl mx-auto pt-20 flex flex-col items-start">
           <h1 className="text-5xl font-bold font-karla text-black tracking-wide">
             {blok.title}

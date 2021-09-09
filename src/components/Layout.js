@@ -1,8 +1,10 @@
 import React from "react"
-import Navigation from './landingPage/navigation'
 import Footer from './Footer'
+import Footer2 from './landingPage/footer'
+import FooterFinal from './landingPage/footerFinal'
 import { useStaticQuery, graphql } from "gatsby"
 import NavTwo from "./landingPage/navTwo"
+import "@fontsource/karla";
 
 export default function Layout({ children, location, lang }){
   const { settings } = useStaticQuery(graphql`
@@ -27,12 +29,14 @@ export default function Layout({ children, location, lang }){
   let parsedSetting = Object.assign({}, content, {content: content})
 
   return (
-    <div className="bg-gray-300">
+    <div className="font-karla bg-gray-300">
       <NavTwo/>
       <main>
       { children }
       </main>
       <Footer />
+      <Footer2/>
+      <FooterFinal/>
     </div>
   )
 }

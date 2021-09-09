@@ -31,7 +31,14 @@ import BlogBannerTop from './blogs/blogBannerTop'
 import AboutStory from './aboutUs/story'
 import AboutMission from './aboutUs/mission'
 import AboutBannerTop from './aboutUs/topBanner'
-
+import BannerCareerTop from './careers/creersBannerTop'
+import WorkWithUs from './careers/workwithus'
+import Jobs from './careers/jobs'
+import Perks from './careers/perks'
+import Values from './aboutUs/values'
+import Culture from './aboutUs/culture'
+import GetStarted from './whyTriiyo/getStarted'
+import WhyUse from './whyTriiyo/whyUse'
 
 
 const Components = {
@@ -51,6 +58,7 @@ const Components = {
   'partners': Partners,
   'bannerTop': BannerTop,
   'bannerWhyTop': BannerWhyTop,
+  'whyUse': WhyUse,
   'subscribe': Subscribe,
   'introWhy': IntroWhy,
   'benefitsWhy': BenefitsWhy,
@@ -65,8 +73,14 @@ const Components = {
   'blogBannerTop': BlogBannerTop,
   'aboutStory': AboutStory,
   'aboutMission': AboutMission,
-  'aboutBannerTop': AboutBannerTop
-
+  'aboutBannerTop': AboutBannerTop,
+  'bannerCareerTop': BannerCareerTop,
+  'workWithUs': WorkWithUs,
+  'jobs': Jobs,
+  'perks': Perks,
+  'values': Values,
+  'culture': Culture,
+  'getStarted': GetStarted
 }
 
 const DynamicComponent = ({blok}) => {

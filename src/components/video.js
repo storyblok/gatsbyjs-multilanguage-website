@@ -1,7 +1,7 @@
 import React from "react"
 
 const Video = ({ videoSrcURL, videoTitle, ...props }) => (
-  <div className="z-10  video_inner overflow-hidden relative">
+  <div className="font-karla z-10  video_inner overflow-hidden relative">
     <iframe id="aspectRatio" class="z-10 jk_video shadow-lg"
       src={videoSrcURL}
       title={videoTitle}

@@ -33,11 +33,11 @@ export default function ArticleTeaser({ blok }){
   let authorContent = thisAuthor.length ? JSON.parse(thisAuthor[0].node.content) : {};
 
   return (
-      <Link to={`/${rewriteSlug(article[0].node.full_slug)}`} className="py-16 block transition hover:opacity-50">
-        <img src={content.image} alt={content.title} className="pb-10 w-full"/>
-        <h2 className="pb-6 text-lg font-bold">{content.title}</h2>
-        <p className="pb-6 text-gray-700 leading-loose">{content.intro}</p>
-        <p className="text-gray-700">{authorContent.name}</p>
+      <Link to={`/${rewriteSlug(article[0].node.full_slug)}`} className="font-karla py-16 block transition hover:opacity-50">
+        <img src={content.image} alt={content.title} className="font-karla pb-10 w-full"/>
+        <h2 className="font-karla pb-6 text-lg font-bold">{content.title}</h2>
+        <p className="font-karla pb-6 text-gray-700 leading-loose">{content.intro}</p>
+        <p className="font-karla text-gray-700">{authorContent.name}</p>
       </Link>
   )
 }
