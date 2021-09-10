@@ -12,14 +12,24 @@ html, body {
 
    /* Old Blog Post Page */
 
-.drop-cap:first-letter {
+/* .drop-cap:first-letter {
     font-size: 5rem;
     float: left;
     line-height: 2rem;
-    /* @apply font-karla; */
+    @apply font-karla;
     @apply text-primary;
     @apply mr-4;
     @apply my-8;
+} */
+
+heading {
+  @apply text-gold_300;
+  @apply pb-5;
+}
+
+paragraph {
+  @apply text-gold_300;
+  @apply pb-5;
 }
 
 .bg-white-half {
@@ -30,10 +40,10 @@ blockquote {
     @apply text-4xl;
     @apply text-primary;
     @apply font-bold;
-    /* @apply font-karla; */
-    /* @apply font-serif; */
+    @apply font-karla;
     @apply py-12;
     @apply text-center;
+    @apply text-gold_300
 }
 
 /* Checkbox  */

@@ -39,6 +39,7 @@ import Values from './aboutUs/values'
 import Culture from './aboutUs/culture'
 import GetStarted from './whyTriiyo/getStarted'
 import WhyUse from './whyTriiyo/whyUse'
+import ContactBook from './contactUs/book'
 
 
 const Components = {
@@ -80,7 +81,8 @@ const Components = {
   'perks': Perks,
   'values': Values,
   'culture': Culture,
-  'getStarted': GetStarted
+  'getStarted': GetStarted,
+  'contactBook': ContactBook
 }
 
 const DynamicComponent = ({blok}) => {

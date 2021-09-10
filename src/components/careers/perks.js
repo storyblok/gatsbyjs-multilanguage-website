@@ -1,10 +1,10 @@
 import * as React from "react";
-import img1 from '../../images/support/support1.png'
-import img2 from '../../images/support/support2.png'
-import img3 from '../../images/support/support3.png'
-import img4 from '../../images/support/support4.png'
-import img5 from '../../images/support/support5.png'
-import img6 from '../../images/support/support6.png'
+import img1 from '../../images/career/img1.svg'
+import img2 from '../../images/career/img2.svg'
+import img3 from '../../images/career/img3.svg'
+import img4 from '../../images/career/img4.svg'
+import img5 from '../../images/career/img5.svg'
+import img6 from '../../images/career/img6.svg'
 
 const Perks = ({ blok }) => (
     <section className="font-karla py-20">

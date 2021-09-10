@@ -13,9 +13,10 @@ const OurStory = ({ blok }) => (
                     <h2 className="text-black font-normal text-3xl leading-none mb-8">
                     Our story
                     </h2>
-                    <p className="font-normal textr-lg leading-snug text-black sm:w-10/12 sm:pr-10">
+                    <p className="font-normal leading-snug text-black sm:w-10/12 sm:pr-10">
                     I'm baby pickled Polaroid godard, gochujang jianbing flannel master cleanse aesthetic squid beard hoodie biodiesel tousled bitters retro. Craft beer glossier humblebrag chicharrones food truck snackwave. 
-
+                    </p>
+                    <p className="font-normal leading-snug text-black sm:w-10/12 sm:pr-10">
                     Dreamcatcher fingerstache chia hashtag everyday carry direct trade. Farm-to-table godard organic brooklyn mixtape. Venmo chartreuse vegan, keffiyeh poutine 3 wolf moon subway tile. Pop-up beard photo booth locavore tumblr. Sustainable keytar freegan thundercats beard enamel pin.
                     </p>
                 </div>
