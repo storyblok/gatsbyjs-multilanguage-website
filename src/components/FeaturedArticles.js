@@ -7,17 +7,17 @@ const FeaturedArticles = ({blok}) => {
     <SbEditable content={blok} key={blok._uid}>
       <div className="font-karla py-8 mb-6 container mx-auto text-left" key={blok._uid}>
         <div className="relative">
-          <h2 className="relative text-4xl z-5">{blok.title}</h2>
-          {/* <div className="absolute top-0 w-64 h-10 mt-6 -ml-4 bg-yellow-300 opacity-50" /> */}
+          <h2 className="relative text-4xl z-5 py-5 pl-4 font-bold">{blok.title}</h2>
         </div>
-        <ul className="flex">
+        <div className="flex-wrap content-center justify-evenly justify-items-center grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mb-4">
           {blok.articles.map((article) => (
-              <li key={article._uid} className="pr-8 w-1/3">
+              /* <li key={article._uid} className="pr-8 w-1/3"> */
+              <div key={article._uid} className="mb-8">
                 <ArticleTeaser blok={article} />
-              </li>
+              </div>
             )
           )}
-        </ul>
+        </div>
       </div>
     </SbEditable>
   )
