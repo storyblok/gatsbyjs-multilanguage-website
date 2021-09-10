@@ -79,6 +79,21 @@ input[type="checkbox"] {
   text-decoration: none;
 }
 
+/* hide extended navbar when reach 1200px */
+@media screen and (max-width: 1200px) {
+  #navDesktop {
+    display: none;
+  }
+}
+
+/* hide mobile navbar when reach 1200px */
+
+@media screen and (min-width: 1200px) {
+  #navMobile {
+    display: none;
+  }
+}
+
 /* Success Image */
 
 #successImage {
@@ -101,58 +116,3 @@ input[type="checkbox"] {
 
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import "@fontsource/karla";
-
-/* change padding on carousel */
-
-/* .carousel-control-prev-pr-none {
-  padding-right: 20rem 25rem;
-  margin-right: 10rm;
-  background-color: #E0B581;
-} */
-
-/* Old checkbox */
-
-  /* label::before {
-    content: "";
-    background: url("../images/bookDemo/check-circle.svg");
-    background-position: center;
-    background-size: contain;
-    width: 32px;
-    height: 32px;
-    position: absolute;
-    left: -32px;
-    top: -4px; */
-
-    /* Try */
-    /* content: "Hola";
-    color: black;
-    background-color: white;
-    background-position: center;
-    background-size: contain;
-    width: 44px;
-    height: 24px;
-    position: absolute;
-    left: -28px;
-    top: 0px;
-    border-radius: 50%; */
-  
-    /* transform: scale(0) rotateZ(180deg);
-    transition: all 0.4s cubic-bezier(0.54, 0.01, 0, 1.49);
-  }
-  
-  input[type="checkbox"]:checked + label::before {
-    transform: scale(1) rotateZ(0deg);
-  } */
-
-  /* input[type="checkbox"]:not(:checked) + label::before {
-    transform: scale(1) rotateZ(0deg);
-    content: "Hola";
-    color: white;
-    background-color: black;
-    width: 44px;
-    height: 24px;
-    position: absolute;
-    left: -28px;
-    top: 0px;
-    border-radius: 50%;
-  } */

@@ -1,12 +1,12 @@
 import * as React from "react"
 import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
-import Logo from '../../images/logo-light.svg'
+import Logo from '../images/logo-light.svg'
 
 
-export default function FooterFinal() {
+export default function FooterDesktop() {
     return (
-        <Navbar className="font-karla bg-navy_400" variant="light">
-        <Container className="flex-wrap items-center">
+        <Navbar id="navDesktop" className="font-karla bg-navy_400" variant="light">
+        <Container className="flex-wrap justify-center items-center">
             <Navbar.Brand href="/">
                 <img
                     src= {Logo}
@@ -18,12 +18,12 @@ export default function FooterFinal() {
             </Navbar.Brand>
            
             <Nav className="justify-content-center">
-                <Nav.Link href="/why-triiyo" className="whitespace-nowrap font-karla font-medium text-white">Contact</Nav.Link>
-                <Nav.Link href="/resources" className="whitespace-nowrap font-karla font-medium text-white">Support</Nav.Link>
-                <Nav.Link href="/resources" className="whitespace-nowrap font-karla font-medium text-white">Privacy Policy</Nav.Link>
-                <Nav.Link href="/resources" className="whitespace-nowrap font-karla font-medium text-white">Terms of service</Nav.Link>
-                <Nav.Link href="/resources" className="whitespace-nowrap font-karla font-medium text-white"> | </Nav.Link>
-                <Nav.Link href="/resources" className="whitespace-nowrap font-karla font-medium text-white">triiyo 2021. All rights reserved.</Nav.Link>
+                <a href="/why-triiyo" className="whitespace-nowrap font-karla font-medium text-gold_300 no-underline px-2 py-2">Contact</a>
+                <a href="/resources" className="whitespace-nowrap font-karla font-medium text-gold_300 no-underline px-2 py-2">Support</a>
+                <a href="/resources" className="whitespace-nowrap font-karla font-medium text-gold_300 no-underline px-2 py-2">Privacy Policy</a>
+                <a href="/resources" className="whitespace-nowrap font-karla font-medium text-gold_300 no-underline px-2 py-2">Terms of service</a>
+                <li href="/resources" className="whitespace-nowrap font-karla font-medium text-neutral_400 px-2 py-2"> | </li>
+                <a href="/resources" className="whitespace-nowrap font-karla font-medium text-white no-underline px-2 py-2">Copyright triiyo 2021. All rights reserved.</a>
             </Nav>
             <Nav>
                 <Nav.Link href="/book-demo" className="whitespace-nowrap md:inline-flex text-center items-center justify-center px-2 py-2 text-base font-bold text-white hover:bg-navy_300">

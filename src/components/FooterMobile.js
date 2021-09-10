@@ -1,39 +1,29 @@
 import React from "react"
-import logo from '../images/logo.png'
 
-const Footer = () => {
+const FooterMobile = () => {
   return (
-    <footer className="font-karla text-center bg-navy flex flex-col items-center py-20 mx-auto">
-        <div className="lg:w-2/12 text-center lg:text-left">
-            <a href="/" className="block">
-                <img className="w-20 inline-block mx-auto" src= {logo} alt=""></img>
-            </a>
+    <footer id="navMobile" className="font-karla text-center bg-navy flex flex-col items-center py-10 mx-auto">
+    <div className="w-10/12 grid grid-cols-1 justify-items-start border-b-2 border-white my-2">
+        <div>
+            <a href="/contact-us" className="capitalize inline-block text-gold_100 text-md font-normal no-underline">Contact</a>
         </div>
-      <div className="flex items-center my-8">
-        <ul className="justify-center flex gap-4 mb-4 lg:mb-0">
-          <li>
-              <a href="/" className="capitalize  inline-block text-gold_100 text-md font-normal">Contact</a>
-          </li>
-          <li>
-              <a href="/" className="capitalize  inline-block text-gold_100 text-md font-normal">Support</a>
-          </li>
-          <li>
-              <a href="/" className="capitalize  inline-block text-gold_100 text-md font-normal">Privacy
-                  Policy</a>
-          </li>
-          <li>
-              <a href="/" className="capitalize  inline-block text-gold_100 text-md font-normal">Terms of
-                  service</a>
-          </li>
-          <li className="text-neutral_400">|</li>
-        </ul>
-      </div>
-      <div>
-          <p className="pl-4 inline-block text-white text-md font-normal">
-              Copyright © triiyo 2021. All rights reserved
-          </p>
-      </div>
-      <ul className="flex gap-4 lg:justify-end justify-center items-center">
+    </div>
+    <div className="w-10/12 grid grid-cols-1 justify-items-start border-b-2 border-white my-2">
+        <div>
+            <a href="/" className="capitalize inline-block text-gold_100 text-md font-normal no-underline">Support</a>
+        </div>
+    </div>
+    <div className="w-10/12 grid grid-cols-1 justify-items-start border-b-2 border-white my-2">
+        <div>
+            <a href="/" className="capitalize inline-block text-gold_100 text-md font-normal no-underline">Privacy Policy</a>
+        </div>
+    </div>
+    <div className="w-10/12 grid grid-cols-1 justify-items-start border-b-2 border-white my-2">
+        <div>
+            <a href="/" className="capitalize inline-block text-gold_100 text-md font-normal no-underline">Terms of service</a>
+        </div>
+    </div>
+      <ul className="flex gap-4 lg:justify-end justify-center items-center mt-5">
         <li>
             <a href="/">
                 <svg width="13" height="24" viewBox="0 0 13 24" fill="none"
@@ -71,12 +61,17 @@ const Footer = () => {
                     <path
                         d="M21.533 5.11175C21.5482 5.32494 21.5482 5.53817 21.5482 5.75136C21.5482 12.2539 16.599 19.7463 7.5533 19.7463C4.76648 19.7463 2.17767 18.9391 0 17.5382C0.395953 17.5838 0.776625 17.5991 1.18781 17.5991C3.48727 17.5991 5.60405 16.8224 7.29441 15.4976C5.13197 15.4519 3.31978 14.0356 2.69541 12.0864C3 12.132 3.30455 12.1625 3.62437 12.1625C4.06598 12.1625 4.50764 12.1016 4.91878 11.995C2.66498 11.5381 0.974578 9.55845 0.974578 7.16759V7.1067C1.62937 7.47219 2.39086 7.70061 3.19791 7.73103C1.87303 6.84777 1.00505 5.34017 1.00505 3.63458C1.00505 2.72089 1.24866 1.88333 1.67508 1.15236C4.09641 4.13713 7.73602 6.08633 11.8172 6.29956C11.7411 5.93408 11.6954 5.55341 11.6954 5.17269C11.6954 2.462 13.8883 0.253906 16.6141 0.253906C18.0304 0.253906 19.3095 0.847813 20.208 1.8072C21.3197 1.59402 22.3857 1.18283 23.3299 0.619391C22.9643 1.76155 22.1877 2.72094 21.1674 3.33003C22.1573 3.22348 23.1167 2.94931 23.9999 2.56864C23.33 3.54322 22.4924 4.4112 21.533 5.11175Z"
                         fill="white" />
-                </svg>
-            </a>
-        </li>
-    </ul>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+        <div>
+          <p className="pt-10 inline-block text-white text-md font-normal">
+              Copyright © triiyo 2021. All rights reserved
+          </p>
+      </div>
     </footer>
   )
 }
 
-export default Footer
+export default FooterMobile

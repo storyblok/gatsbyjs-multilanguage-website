@@ -1,7 +1,6 @@
 import React from "react"
-import Footer from './Footer'
-import Footer2 from './landingPage/footer'
-import FooterFinal from './landingPage/footerFinal'
+import FooterMobile from './FooterMobile'
+import FooterDesktop from './footerDesktop'
 import { useStaticQuery, graphql } from "gatsby"
 import NavTwo from "./landingPage/navTwo"
 import "@fontsource/karla";
@@ -34,9 +33,8 @@ export default function Layout({ children, location, lang }){
       <main>
       { children }
       </main>
-      <Footer />
-      <Footer2/>
-      <FooterFinal/>
+      <FooterMobile />
+      <FooterDesktop/>
     </div>
   )
 }
