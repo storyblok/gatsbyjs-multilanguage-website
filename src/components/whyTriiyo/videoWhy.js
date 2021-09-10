@@ -1,15 +1,11 @@
 import * as React from "react";
-
-import Video from '../video';
+import ResponsivePlayer from "./responsiveVideo";
 
 const VideoWhy = ({ blok }) => (
 	<section class="font-karla bg-navy_300 py-20">
         <div class="mx-auto md:w-7/12">
-			<div class="container_sm px-8 pt-20 bg-white">
-                    <Video
-                        videoSrcURL="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                        videoTitle="Official Music Video on YouTube"
-                    />
+			<div class="px-10 pt-3 bg-white_100 rounded-3">
+                    <ResponsivePlayer className="px-10"/>
                      <h3 className="text-center text-navy_300 py-10">
                         Triiyo delivers a simple solution for everyone
                     </h3>

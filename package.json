@@ -33,6 +33,7 @@
         "react-bootstrap": "^2.0.0-beta.6",
         "react-dom": "^17.0.2",
         "react-helmet": "^6.1.0",
+        "react-player": "^2.9.0",
         "storyblok-js-client": "^4.0.9",
         "storyblok-react": "^0.1.2",
         "storyblok-rich-text-react-renderer": "^2.3.1"
