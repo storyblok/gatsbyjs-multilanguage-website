@@ -3,6 +3,7 @@ import BlogBannerTop from "../components/blogs/blogBannerTop"
 import DynamicComponent from "../components/DynamicComponent"
 import Layout from "../components/Layout"
 import useStoryblok from "../utils/storyblok"
+import Subscribe from '../components/landingPage/subscribe'
 
 export default function BlogEntry({ pageContext, location }) {
   const story = useStoryblok(pageContext.story, location)
@@ -14,6 +15,7 @@ export default function BlogEntry({ pageContext, location }) {
         blok={story.content}
         key={story._uid}
       />
+      <Subscribe/>
     </Layout>
   )
 }

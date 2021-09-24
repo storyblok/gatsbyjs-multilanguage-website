@@ -14,8 +14,10 @@ import TextImageRight from './landingPage/textImageRight'
 import WhatSupport from './landingPage/whatSupport'
 import Partners from './landingPage/partners'
 import WhyTriiyo from './landingPage/whyTriiyo'
+import DownloadFreeBook from './landingPage/downloadFreeBook'
 import BannerTop from './resourcesPage/banner'
 import BannerWhyTop from './whyTriiyo/bannerWhy'
+import Testimonial from './landingPage/testimonial2'
 import Subscribe from './landingPage/subscribe'
 import IntroWhy from './whyTriiyo/introWhy'
 import BenefitsWhy from './whyTriiyo/benefitsWhy'
@@ -23,6 +25,7 @@ import VideoWhy from './whyTriiyo/videoWhy'
 import ContactForm from './contactUs/contactForm'
 import BannerContactTop from './contactUs/contactBannerTop'
 import ContactIcons from './contactUs/contactIcons'
+import BookNow from './contactUs/bookNow'
 import BookBannerTop from './bookDemo/bookBannerTop'
 import BookDemoForm from './bookDemo/bookDemoForm'
 import BookSuccess from './bookDemo/success'
@@ -35,11 +38,24 @@ import BannerCareerTop from './careers/creersBannerTop'
 import WorkWithUs from './careers/workwithus'
 import Jobs from './careers/jobs'
 import Perks from './careers/perks'
+import KnowYou from './careers/knowYou'
+import BeingYou from './careers/beingYou'
+import NetEngineer from './careers/netEngineer'
+import AccountExecutive from './careers/accountExecutive'
+import UxDesigner from './careers/uxDesigner'
 import Values from './aboutUs/values'
 import Culture from './aboutUs/culture'
 import GetStarted from './whyTriiyo/getStarted'
 import WhyUse from './whyTriiyo/whyUse'
 import ContactBook from './contactUs/book'
+import Privacy from './privacy/privacy'
+import TermsConditions from './termsConditions/termsConditions'
+import Media from './contactUs/media'
+// Blog Structure
+import BlogHeader from './blogs/blogHeader'
+import VideoBlog from './VideoBlog'
+import VideoBlogNew from './VideoBlogPage'
+import Videos from './blogs/videos'
 
 
 const Components = {
@@ -47,12 +63,15 @@ const Components = {
   'grid': Grid,
   'feature': Feature,
   'blogpost': BlogPost,
+  'videoBlog': VideoBlog,
+  'videoBlogNew': VideoBlogNew,
   'slide': Slide,
   'article-teaser': ArticleTeaser,
   'featured-articles': FeaturedArticles,
   'posts-list': PostsList,
   'heroCarousel': HeroCarousel,
   'textImageRight': TextImageRight,
+  'downloadFreeBook': DownloadFreeBook,
   'about': About,
   'whyTriiyo': WhyTriiyo,
   'whatSupport': WhatSupport,
@@ -66,6 +85,7 @@ const Components = {
   'videoWhy': VideoWhy,
   'contactForm': ContactForm,
   'bannerContactTop': BannerContactTop,
+  'bookNow': BookNow,
   'contactIcons': ContactIcons,
   'bookBannerTop': BookBannerTop,
   'bookDemoForm': BookDemoForm,
@@ -82,7 +102,18 @@ const Components = {
   'values': Values,
   'culture': Culture,
   'getStarted': GetStarted,
-  'contactBook': ContactBook
+  'contactBook': ContactBook,
+  'privacy': Privacy,
+  'termsConditions': TermsConditions,
+  'knowYou': KnowYou,
+  'beingYou': BeingYou,
+  'netEngineer': NetEngineer,
+  'accountExecutive': AccountExecutive,
+  'uxDesigner': UxDesigner,
+  'testimonial': Testimonial, 
+  'media': Media,
+  'blogHeader': BlogHeader,
+  'videos': Videos
 }
 
 const DynamicComponent = ({blok}) => {

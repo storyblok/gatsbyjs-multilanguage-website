@@ -11,6 +11,8 @@ module.exports = {
     `gatsby-transformer-sharp`,
     'gatsby-plugin-postcss',
     `gatsby-plugin-fontawesome-css`,
+    "gatsby-plugin-react-helmet",
+    // `gatsby-plugin-recaptcha`,
     {
     resolve: 'gatsby-source-storyblok',
     options: {
@@ -19,6 +21,14 @@ module.exports = {
       version: process.env.NODE_ENV === 'production' ? 'published' : 'draft'
     }
   },
+  {
+    resolve: `gatsby-plugin-recaptcha`,
+    options: {
+       async: false,
+       defer: false,
+       args: `?onload=onloadCallback&render=explicit`,
+    },
+ },
   {
     resolve: `gatsby-plugin-google-fonts`,
     options: {

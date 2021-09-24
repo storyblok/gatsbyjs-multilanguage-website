@@ -16,12 +16,14 @@ const HeroCarousel = ({ blok }) => (
                   <div className="container grid sm:grid-cols-2 sm:gap-10 items-center">
                     <div className="w-full pl-10 px-4">
                         <h1 className="text-black font-normal text-5xl leading-none mb-0">
-                        Workforce connectivity</h1>
-                        <h1 className="text-black font-normal text-5xl leading-none mb-8">
-                        made easy. {/*  { blok.title} */}
-                        </h1>
+                        Workplaces powered by human connection. 
+                        </h1> {/*  { blok.title} */}
+                        {/* <h1 className="text-black font-normal text-5xl leading-none mb-8">
+                        human connection. 
+                        </h1> */}
                         <p className="font-normal textr-base leading-snug mb-10 text-black">
-                        The HR automation tool to increase engagement and retention during workplace transitions.</p>
+                        The human-centred connectivity tool that increases employee engagement and retention during workplace transitions.
+                        </p>
                         <div class="items-start">
                             <a href="/book-demo"
                                 class="inline-block bg-gold_300 py-4 px-6 text-base font-bold leading-none text-white rounded no-underline">
@@ -40,10 +42,10 @@ const HeroCarousel = ({ blok }) => (
                   <div className="container grid sm:grid-cols-2 sm:gap-10 items-center">
                     <div className="w-full pl-10 px-4">
                         <h1 className="text-white font-normal text-5xl leading-none mb-8">
-                        Don’t stress while you’re on leave
+                        Stay connected and informed during leave
                         </h1>
                         <p className="font-normal text-base leading-snug mb-10 text-white">
-                        Being away from work for long periods can make you feel disengaged from your workplace and team. triiyo will ensure you feel connected and valued, even when you’re on leave.
+                        The employee-centric solution ensures people feel connected and valued, even when on leave. Manager reminders and team prompts makes staying connected easy,.
                         </p>
                         <div class="items-start">
                             <a href="/book-demo"
@@ -62,11 +64,11 @@ const HeroCarousel = ({ blok }) => (
               <div className="bg-sky_500 py-10">
                   <div className="container grid sm:grid-cols-2 sm:gap-10 items-center">
                     <div className="w-full pl-10 px-4">
-                        <h1 className="text-black font-normal text-5xl leading-none mb-8">
-                        Look after your wellbeing, on us
+                        <h1 className="text-white font-normal text-5xl leading-none mb-8">
+                        Look after employee wellbeing
                         </h1>
-                        <p className="font-normal text-base leading-snug mb-10 text-black">
-                        triiyo has a library of resources, curated by experts, for you to access at any time. Whether you want advice on mental illness, financial planning or managing stress, we have you covered. Confidentially.
+                        <p className="font-normal text-base leading-snug mb-10 text-white">
+                        triiyo has a library of resources, curated by experts, accessible by all at any time. Our external platform provides a safe, proactive space for people to seek advice and support, confidentially, anywhere.
                         </p>
                         <div className="items-start">
                             <a href="/book-demo"
@@ -86,10 +88,10 @@ const HeroCarousel = ({ blok }) => (
                   <div className="container grid sm:grid-cols-2 sm:gap-10 items-center">
                     <div className="w-full pl-10 px-4">
                         <h1 className="text-black font-normal text-5xl leading-none mb-8">
-                        Keep in touch for a smooth return to work
+                        Managers look like superstars                        
                         </h1>
                         <p className="font-normal text-base leading-snug mb-10 text-black">
-                        Returning to work after any period of absense can be stressful. We take the guess work out of what to do and when, guiding you every step of the way until you’re settled back in.
+                        Our simple, automated tool guides managers every step of the way through complex workplace transitions. We take away the guess work, ensuring each employee has a consistently positive experience.
                         </p>
                         <div class="items-start">
                             <a href="/book-demo"

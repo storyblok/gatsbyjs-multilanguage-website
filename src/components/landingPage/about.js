@@ -1,11 +1,11 @@
 import * as React from "react";
-import img1 from "../../images/journey.png"
-import img2 from "../../images/empower.png"
-import img3 from "../../images/communities.png"
+import img1 from "../../images/landing/journey.svg"
+import img2 from "../../images/landing/empower.svg"
+import img3 from "../../images/landing/communities.svg"
 
 const About = ({ blok }) => (
     <div bg-gold py-6>
-        <section className="font-karla bg-white_100 py-10 md:py-24">
+        <section className="font-karla bg-white py-10 md:py-24">
 			<div className="container">
 				<div className="sm:w-8/12 mx-auto text-center">
 					<h2 className="text-black font-karla font-bold leading-none mb-8"> {blok.title} </h2>
@@ -28,8 +28,7 @@ const About = ({ blok }) => (
 								Guided journeys
 							</h3>
 							<p className="font-normal textr-lg leading-snug text-black">
-								Ready-made, automated and tailored communication flows guide managers and employees on
-								personalised journeys.
+								Ready-made, automated and customised communication flows guide managers and employees on time-based personalised journeys 
 							</p>
 						</div>
 					</div>
@@ -43,8 +42,7 @@ const About = ({ blok }) => (
 								Educate and empower
 							</h3>
 							<p className="font-normal textr-lg leading-snug text-black">
-								Expertly curated content educates and empowers at every stage of work-life transitions
-							</p>
+								Expertly curated resources provide advice and support at every stage with tailored content in an easily accessible central location							</p>
 						</div>
 					</div>
 					<div className="sm:w-7/12">
@@ -63,8 +61,7 @@ const About = ({ blok }) => (
 								Communities and buddies
 							</h3>
 							<p className="font-normal textr-lg leading-snug text-black">
-								Communities and work buddy groups create safe spaces for people to connect and drive social
-								capital
+							Community channels and work buddy groups create safe spaces for social interaction amongst teams and like-minded people, wherever they are
 							</p>
 						</div>
 					</div>

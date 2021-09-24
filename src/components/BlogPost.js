@@ -35,7 +35,7 @@ const BlogPost = ({ blok }) => {
           <div>
             <h3 className="font-bold text-xl my-2 text-gold_300">{authorContent.name} </h3>
           </div>
-          <img className="w-full bg-gray-300 my-10" src={blok.image} alt={blok.title} />
+          <img className="w-full bg-gray-300 mt-10 mb_5" src={blok.image} alt={blok.title} />
         </div>
         <div className="max-w-5xl mx-10 lg:mx-auto pt-20 flex flex-col items-start">
           <div className="col-span-2"></div>
@@ -53,8 +53,8 @@ const BlogPost = ({ blok }) => {
             <div className="font-bold text-xl my-4">{authorContent.name}</div>
             <p className="text-base text-gray-600">{authorContent.description}</p>
           </div>
-        </div> */}
-
+        </div> */} 
+        
         { related }
       </div>
     </SbEditable>

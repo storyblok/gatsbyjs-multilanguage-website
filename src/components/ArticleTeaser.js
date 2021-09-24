@@ -51,6 +51,7 @@ export default function ArticleTeaser({ blok }){
             <Card.Text>
             {content.intro}
             </Card.Text>
+            {/* <a href={`http://localhost:8000/`} className="no-underline font-bold text-gold_300">Read more </a> */}
             <a href={`/${rewriteSlug(article[0].node.full_slug)}`} className="no-underline font-bold text-gold_300">Read more </a>
             {/* <FaBeer /> */}
           </Card.Body>

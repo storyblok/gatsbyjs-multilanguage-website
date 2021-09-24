@@ -9,17 +9,21 @@ const BookDemoForm = () => {
     const [phone, setPhone] = useState("");
     const [company, setCompany] = useState("");
     const [jobtitle, setJobtitle] = useState("");
-    const [numemployees, setNumemployees] = useState("");
-    const [workplacetransition, setWorkplacetransition] = useState(false);
-    const [parentall, setParentall] = useState(false);
+    const [numberEmployees, setNumberEmployees] = useState("");
+    const [parentalleave, setParentalLeave] = useState(false);
+    const [carerleave, setCarerLeave] = useState(false);
     const [remoteworking, setRemoteWorking] = useState(false);
+    const [retirementplanning, setRetirementPlanning] = useState(false);
+    const [returningtowork, setReturningtowork] = useState(false);
+    const [globalmobility, setGlobalmobility] = useState(false);
     const [message, setMessage] = useState("");
 
     const handleSubmit = (evt) => {
 
         evt.preventDefault();
         var xhr = new XMLHttpRequest();
-        var url = 'https://api.hsforms.com/submissions/v3/integration/submit/20652556/31133bfe-9feb-47cc-9a25-e8c4296b54cf'
+        // var url = 'https://api.hsforms.com/submissions/v3/integration/submit/20652556/31133bfe-9feb-47cc-9a25-e8c4296b54cf'
+        var url = 'https://api.hsforms.com/submissions/v3/integration/submit/5692042/25a0083f-0c1a-45d6-93b8-b8582643eb0b'
         var data = {
             "fields": [
                 {
@@ -47,20 +51,32 @@ const BookDemoForm = () => {
                     "value": jobtitle
                 },
                 {
-                    "name": "numemployees",
-                    "value": numemployees
+                    "name": "numberEmployees",
+                    "value": numberEmployees
                 },
                 {
-                    "name": "workplacetransition",
-                    "value": workplacetransition
+                    "name": "parentalleave",
+                    "value": parentalleave
                 },
                 {
-                    "name": "parentall",
-                    "value": parentall
+                    "name": "carerleave",
+                    "value": carerleave
                 },
                 {
                     "name": "remoteworking",
                     "value": remoteworking
+                },
+                {
+                    "name": "retirementplanning",
+                    "value": retirementplanning
+                },
+                {
+                    "name": "returningtowork",
+                    "value": returningtowork
+                },
+                {
+                    "name": "globalmobility",
+                    "value": globalmobility
                 },
                 {
                     "name": "message",
@@ -153,49 +169,82 @@ const BookDemoForm = () => {
                                     type="text"
                                     className="border border-gray-500 px-2 py-2 focus:outline-none focus:border-navy_300 rounded-md"
                                     placeholder="Number of employees (optional)"
-                                    value={numemployees}
-                                    onChange={e => setNumemployees(e.target.value)}
+                                    value={numberEmployees}
+                                    onChange={e => setNumberEmployees(e.target.value)}
                                 />
-                                <p className="text-start col-span-2">Workplace transitions and return to work journey’s you are interested in</p>
+                                <p className="text-start col-span-2">What workplace transitions are you interested in?</p>
                                 <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 col-span-2">
                                     <div className="flex-1">
                                         <input
                                             type="checkbox"
                                             className="border border-gray-500 px-2 py-2 focus:outline-none focus:border-navy_300 rounded-md"
-                                            placeholder="Parental Leave"
-                                            value={parentall}
-                                            onChange={e => setParentall(e.target.checked)}
+                                            placeholder=""
+                                            value={parentalleave}
+                                            onChange={e => setParentalLeave(e.target.checked)}
                                             id="parental"
                                         />
-                                        <label for="parental" className={` ${parentall ? "checked" : "unchecked"} ml-1 whitespace-nowrap inline-flex items-center justify-center px-2 py-0 border border-transparent rounded-xl shadow-sm text-base hover:bg-navy_200`}> Parental Leave</label>
+                                        <label for="parental" className={` ${parentalleave ? "checked" : "unchecked"} ml-1 whitespace-nowrap inline-flex items-center justify-center px-2 py-0 border border-transparent rounded-xl shadow-sm text-base hover:bg-navy_200`}> Parental Leave</label>
                                     </div>
                                     <div>
                                         <input
                                             type="checkbox"
                                             className="border border-gray-500 px-2 py-2 focus:outline-none focus:border-navy_300  rounded-md"
-                                            placeholder="Workplace Transition"
-                                            value={workplacetransition}
-                                            onChange={e => setWorkplacetransition(e.target.checked)}
-                                            id="workplace"
+                                            placeholder=""
+                                            value={carerleave}
+                                            onChange={e => setCarerLeave(e.target.checked)}
+                                            id="carerLeave"
                                         />
-                                        <label for="workplace" className={` ${workplacetransition ? "checked" : "unchecked"} ml-1 whitespace-nowrap inline-flex items-center justify-center px-2 py-0 border border-transparent rounded-xl shadow-sm text-base hover:bg-navy_200`}> Carer Leave</label>
+                                        <label for="carerLeave" className={` ${carerleave ? "checked" : "unchecked"} ml-1 whitespace-nowrap inline-flex items-center justify-center px-2 py-0 border border-transparent rounded-xl shadow-sm text-base hover:bg-navy_200`}> Carers Leave</label>
                                     </div>
                                     <div>
                                         <input
                                             type="checkbox"
-                                            className="border border-gray-500 px-2 py-2 focus:outline-none focus:border-navy_300 rounded-md"
-                                            placeholder="Remote Working"
+                                            className="border border-gray-500 px-2 py-2 focus:outline-none focus:border-navy_300  rounded-md"
+                                            placeholder=""
                                             value={remoteworking}
                                             onChange={e => setRemoteWorking(e.target.checked)}
-                                            id="remoteworking"
+                                            id="remoteWorking"
                                         />
-                                        <label for="remoteworking" className={` ${remoteworking ? "checked" : "unchecked"} ml-1 whitespace-nowrap inline-flex items-center justify-center px-2 py-0 border border-transparent rounded-xl shadow-sm text-base hover:bg-navy_200`}> Remote Working</label>
+                                        <label for="remoteWorking" className={` ${remoteworking ? "checked" : "unchecked"} ml-1 whitespace-nowrap inline-flex items-center justify-center px-2 py-0 border border-transparent rounded-xl shadow-sm text-base hover:bg-navy_200`}> Remote Working</label>
+                                    </div>
+                                    <div>
+                                        <input
+                                            type="checkbox"
+                                            className="border border-gray-500 px-2 py-2 focus:outline-none focus:border-navy_300  rounded-md"
+                                            placeholder=""
+                                            value={retirementplanning}
+                                            onChange={e => setRetirementPlanning(e.target.checked)}
+                                            id="retirementPlanning"
+                                        />
+                                        <label for="retirementPlanning" className={` ${retirementplanning ? "checked" : "unchecked"} ml-1 whitespace-nowrap inline-flex items-center justify-center px-2 py-0 border border-transparent rounded-xl shadow-sm text-base hover:bg-navy_200`}> Retirement Planning</label>
+                                    </div>
+                                    <div>
+                                        <input
+                                            type="checkbox"
+                                            className="border border-gray-500 px-2 py-2 focus:outline-none focus:border-navy_300  rounded-md"
+                                            placeholder=""
+                                            value={returningtowork}
+                                            onChange={e => setReturningtowork(e.target.checked)}
+                                            id="returningtowork"
+                                        />
+                                        <label for="returningtowork" className={` ${returningtowork ? "checked" : "unchecked"} ml-1 whitespace-nowrap inline-flex items-center justify-center px-2 py-0 border border-transparent rounded-xl shadow-sm text-base hover:bg-navy_200`}> Returning to Work</label>
+                                    </div>
+                                    <div>
+                                        <input
+                                            type="checkbox"
+                                            className="border border-gray-500 px-2 py-2 focus:outline-none focus:border-navy_300  rounded-md"
+                                            placeholder=""
+                                            value={globalmobility}
+                                            onChange={e => setGlobalmobility(e.target.checked)}
+                                            id="globalmobility"
+                                        />
+                                        <label for="globalmobility" className={` ${globalmobility ? "checked" : "unchecked"} ml-1 whitespace-nowrap inline-flex items-center justify-center px-2 py-0 border border-transparent rounded-xl shadow-sm text-base hover:bg-navy_200`}> Global Mobility </label>
                                     </div>
                                 </div>
                                 <textarea
                                     cols="10"
                                     rows="4"
-                                    className="border border-gray-500 px-2 py-2 focus:outline-none focus:border-purple-500 col-span-2"
+                                    className="border border-gray-500 px-2 py-2 focus:outline-none focus:border-purple-500 col-span-2 rounded-md"
                                     placeholder="Write comments here"
                                     type="text"
                                     value={message}
@@ -228,7 +277,12 @@ export default BookDemoForm
 
 
 
-// Info to link the form with Hubspot
+//NEW ONE
+//	portalId: "5692042",
+//	formId: "25a0083f-0c1a-45d6-93b8-b8582643eb0b"
 
+
+//OLD ONE
+// Info to link the form with Hubspot
 //	portalId: "20652556",
 //	formId: "31133bfe-9feb-47cc-9a25-e8c4296b54cf"

@@ -81,6 +81,10 @@ input[type="checkbox"] {
   color: #E0B581;
 }
 
+#responsive-navbar-nav:hover {
+  color: #E0B581;
+}
+
 #no-underline {
   text-decoration: none;
 }
@@ -123,6 +127,68 @@ input[type="checkbox"] {
 #responsive-navbar-nav {
   justify-content: flex;
 }
+
+/* Carousel  */
+/* 
+.owl-nav {
+	position: absolute;
+	top: 40%;
+	transform: translateY(-40%);
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+.owl-carousel .owl-nav button.owl-prev:focus,
+.owl-carousel .owl-nav button.owl-next:focus,
+.owl-dots .owl-dot:focus {
+	outline: none;
+}
+.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel .owl-nav button.owl-next {
+	width: 32px;
+	height: 32px;
+	background: rgba(255, 255, 255, 0.75);
+	border: 1px solid #e4e6e7;
+	border-radius: 50%;
+	color: #111213;
+}
+.owl-carousel .owl-nav button.owl-prev span,
+.owl-carousel .owl-nav button.owl-next span {
+	font-size: 20px;
+}
+.owl-carousel .owl-nav button.owl-prev {
+	position: relative;
+	left: 20px;
+}
+.owl-carousel .owl-nav button.owl-next {
+	position: relative;
+	right: 20px;
+}
+.owl-dots {
+	margin-top: 40px;
+	display: block;
+	text-align: center;
+}
+
+.owl-dots .owl-dot {
+	margin: 0 5px;
+}
+
+.owl-dots .owl-dot span {
+	height: 16px;
+	width: 16px;
+	border-radius: 50%;
+	border-color: #24485c;
+	border-width: 1px;
+	border-style: solid;
+	display: block;
+}
+
+.owl-dots .owl-dot.active span {
+	background: #24485c;
+	opacity: 1;
+} */
+
 
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import "@fontsource/karla";

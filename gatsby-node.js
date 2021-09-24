@@ -81,3 +81,14 @@ exports.createPages = ({ graphql, actions }) => {
     )
   })
 }
+
+// carousel test
+
+// exports.onCreateWebpackConfig = ({ actions }) => {
+//   const { setWebpackConfig } = actions
+//   setWebpackConfig({
+//     externals: {
+//       jquery: 'jQuery', // important: 'Q' capitalized
+//     },
+//   })
+// }

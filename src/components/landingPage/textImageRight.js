@@ -14,6 +14,12 @@ const TextImageRight = ({ blok }) => (
                     <p className="font-normal  textr-lg leading-snug text-white sm:w-10/12 sm:pr-10">
                         { blok.paragraph}
                     </p>
+                    <p className="font-normal  textr-lg leading-snug text-white sm:w-10/12 sm:pr-10">
+                        { blok.paragraph2}
+                    </p>
+                    <p className="font-normal  textr-lg leading-snug text-white sm:w-10/12 sm:pr-10">
+                        { blok.paragraph3}
+                    </p>
                 </div>
             </div>
 	    </section>
