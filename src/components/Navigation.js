@@ -1,6 +1,5 @@
 import Link from 'gatsby-link'
 import React from "react"
-import SbEditable from 'storyblok-react'
 import rewriteSlug from '../utils/rewriteSlug'
 
 const Nav = ({ settings, lang }) => (

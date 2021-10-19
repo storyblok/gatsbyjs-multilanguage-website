@@ -1,13 +1,13 @@
 import React from 'react'
-import SbEditable from 'storyblok-react'
+import { sbEditable } from "@storyblok/storyblok-editable";
 
 const Slider = ({blok}) => {
   return (
-    <SbEditable content={blok} key={blok._uid}>
+    <div {...sbEditable(blok)}>
       <div className="snap-start w-full flex-shrink-0 bg-gray-300">
-       <img className="object-cover w-full h-full" src={blok.image} id={blok._uid} />
-       </div>
-    </SbEditable>
+        <img className="object-cover w-full h-full" src={blok.image} id={blok._uid} />
+      </div>
+    </div>
     )
 }
 

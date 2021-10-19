@@ -1,9 +1,9 @@
 import React from 'react'
 import DynamicComponent from './DynamicComponent'
-import SbEditable from 'storyblok-react'
+import { sbEditable } from "@storyblok/storyblok-editable";
 
 const Grid = ({blok}) => (
-  <SbEditable content={blok} key={blok._uid}>
+  <div {...sbEditable(blok)}>
     <ul className="flex flex-wrap p-8 bg-white container mx-auto">
       {blok.columns.map((blok) => (
           <li key={blok._uid} className="flex-auto px-2">
@@ -12,7 +12,7 @@ const Grid = ({blok}) => (
         )
       )}
     </ul>
-  </SbEditable>
+  </div>
 )
 
 export default Grid

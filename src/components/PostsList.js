@@ -1,5 +1,5 @@
 import React from "react"
-import SbEditable from "storyblok-react"
+import { sbEditable } from "@storyblok/storyblok-editable";
 import { useStaticQuery, graphql } from "gatsby"
 
 import rewriteSlug from '../utils/rewriteSlug'
@@ -41,7 +41,7 @@ const PostsList = ({ blok }) => {
 
   const arrayOfPosts = isResolved ? blok.posts : filteredPosts
   return (
-    <SbEditable content={blok} key={blok._uid}>
+    <div {...sbEditable(blok)}>
       <div className="container mx-auto">
       <ul className="flex flex-col justify-center items-center">
         {arrayOfPosts.map(post => {
@@ -80,7 +80,7 @@ const PostsList = ({ blok }) => {
         })}
       </ul>
       </div>
-    </SbEditable>
+    </div>
   )
 }
 
