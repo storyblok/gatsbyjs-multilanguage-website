@@ -1,10 +1,10 @@
 import React from 'react'
-import SbEditable from 'storyblok-react'
+import { sbEditable } from "@storyblok/storyblok-editable";
 import ArticleTeaser from './ArticleTeaser'
 
 const FeaturedArticles = ({blok}) => {
   return (
-    <SbEditable content={blok} key={blok._uid}>
+    <div {...sbEditable(blok)}>
       <div className="py-8 mb-6 container mx-auto text-left" key={blok._uid}>
         <div className="relative">
           <h2 className="relative font-serif text-4xl z-10 text-primary">{blok.title}</h2>
@@ -19,7 +19,7 @@ const FeaturedArticles = ({blok}) => {
           )}
         </ul>
       </div>
-    </SbEditable>
+    </div>
   )
 }
 

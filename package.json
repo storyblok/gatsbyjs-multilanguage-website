@@ -14,6 +14,7 @@
         "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
     },
     "dependencies": {
+        "@storyblok/storyblok-editable": "^1.0.0",
         "gatsby": "^3.5.0",
         "gatsby-plugin-google-fonts": "^1.0.1",
         "gatsby-plugin-i18n": "^1.0.1",
@@ -30,7 +31,6 @@
         "react-dom": "^17.0.2",
         "react-helmet": "^6.1.0",
         "storyblok-js-client": "^4.0.9",
-        "storyblok-react": "^0.1.2",
         "storyblok-rich-text-react-renderer": "^2.3.1"
     },
     "devDependencies": {

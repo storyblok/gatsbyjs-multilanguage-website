@@ -1,5 +1,5 @@
 import React from "react"
-import SbEditable from "storyblok-react"
+import { sbEditable } from "@storyblok/storyblok-editable";
 import { render } from "storyblok-rich-text-react-renderer"
 import { useStaticQuery, graphql } from "gatsby"
 import DynamicComponent from './DynamicComponent'
@@ -17,14 +17,14 @@ const BlogPost = ({ blok }) => {
         }
       }
     }
-  } 
+  }
   `)
 
   let thisAuthor = authors.edges.filter(({ node }) => node.uuid === blok.author)
   let authorContent = thisAuthor.length ? JSON.parse(thisAuthor[0].node.content) : {};
 
   return (
-    <SbEditable content={blok} key={blok._uid}>
+    <div {...sbEditable(blok)}>
       <div className="bg-white-half w-full">
         <div className="max-w-3xl mx-auto text-center pt-20 flex flex-col items-center">
           <h1 className="text-5xl font-bold font-serif text-primary tracking-wide">
@@ -50,7 +50,7 @@ const BlogPost = ({ blok }) => {
 
         { related }
       </div>
-    </SbEditable>
+    </div>
   )
 }
 
