@@ -35,7 +35,7 @@ const Nav = ({ settings, lang }) => (
             {settings &&
               settings.content.main_navi.map((navitem, index) => (
                 <li key={index}>
-                  <Link to={`/${rewriteSlug(navitem.link.cached_url)}`} prefetch="true" className="block px-4 py-1 md:p-2 lg:px-8">
+                  <Link to={`${navitem.link.cached_url.startsWith('/') ? '' : '/'}${rewriteSlug(navitem.link.cached_url)}`} prefetch="true" className="block px-4 py-1 md:p-2 lg:px-8">
                     {navitem.name}
                   </Link>
                 </li>
