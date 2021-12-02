@@ -69,3 +69,6 @@ yarn-error.log
 .yarn-integrity
 
 .vercel
+
+# Editors
+.vscode/
