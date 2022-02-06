@@ -12,31 +12,31 @@ module.exports = {
     `gatsby-transformer-sharp`,
     'gatsby-plugin-postcss',
     {
-    resolve: 'gatsby-source-storyblok',
-    options: {
-      accessToken: 'vGsNXj86XGJjyO7bFWw8Mgtt',
-      homeSlug: 'home',
-      version: process.env.NODE_ENV === 'production' ? 'published' : 'draft'
-    }
-  },
-  {
-    resolve: `gatsby-plugin-google-fonts`,
-    options: {
-      fonts: [
-        `Merriweather:400,700`,
-        `Roboto:300,400,400i,700` // you can also specify font weights and styles
-      ],
-      display: 'swap'
-    }
-  },
-  {
-    resolve: `gatsby-plugin-i18n`,
-    options: {
-      langKeyDefault: 'en',
-      langKeyForNull: 'en',
-      prefixDefault: false,
-      useLangKeyLayout: false,
+      resolve: 'gatsby-source-storyblok',
+      options: {
+        accessToken: 'XAtHQONyH3ciaShLrirLKAtt',
+        homeSlug: 'home',
+        version: process.env.NODE_ENV === 'production' ? 'published' : 'draft'
+      }
     },
-  }
-],
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Merriweather:400,700`,
+          `Roboto:300,400,400i,700` // you can also specify font weights and styles
+        ],
+        display: 'swap'
+      }
+    },
+    {
+      resolve: `gatsby-plugin-i18n`,
+      options: {
+        langKeyDefault: 'en',
+        langKeyForNull: 'en',
+        prefixDefault: false,
+        useLangKeyLayout: false,
+      },
+    }
+  ],
 }
