@@ -1,14 +1,13 @@
 import React from "react"
-import DynamicComponent from "../components/DynamicComponent"
 import Layout from "../components/Layout"
-import useStoryblok from "../utils/storyblok"
+import { useStoryblokState, StoryblokComponent } from "gatsby-source-storyblok"
 
 export default function BlogEntry({ pageContext, location }) {
-  const story = useStoryblok(pageContext.story, location)
+  const story = useStoryblokState(pageContext.story, location)
 
   return (
     <Layout location={location}>
-      <DynamicComponent
+      <StoryblokComponent
         blok={story.content}
         key={story._uid}
       />
