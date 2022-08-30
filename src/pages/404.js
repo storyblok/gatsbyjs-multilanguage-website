@@ -1,17 +1,12 @@
-import React from "react"
-import Page from '../components/Page'
-import Layout from "../components/Layout"
-import useStoryblok from '../utils/storyblok'
+import * as React from "react"
 
-export default function Page404({ location }) {
-  const story = useStoryblok(null, location)
+import Layout from "../components/layout"
 
-  let content = (<h1>Not found</h1>)
-  if(story && story.content) content = (<Page blok={story.content} />)
+const NotFoundPage = () => (
+  <Layout>
+    <h1>404: Not Found</h1>
+    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+  </Layout>
+)
 
-  return (
-    <Layout location={location}>
-      { content }
-    </Layout>
-  )
-}
+export default NotFoundPage

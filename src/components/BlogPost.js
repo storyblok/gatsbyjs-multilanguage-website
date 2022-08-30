@@ -1,11 +1,10 @@
 import React from "react"
-import { sbEditable } from "@storyblok/storyblok-editable";
 import { render } from "storyblok-rich-text-react-renderer"
 import { useStaticQuery, graphql } from "gatsby"
-import DynamicComponent from './DynamicComponent'
+import { StoryblokComponent, storyblokEditable } from "gatsby-source-storyblok"
 
 const BlogPost = ({ blok }) => {
-  const related = blok.related && blok.related.length ? (<DynamicComponent blok={blok.related[0]} key={blok.related[0]._uid}/>) : null
+  const related = blok.related && blok.related.length ? (<StoryblokComponent blok={blok.related[0]} key={blok.related[0]._uid} />) : null
   const { authors } = useStaticQuery(graphql`
   {
     authors: allStoryblokEntry(filter: {field_component: {eq: "author"}}) {
@@ -24,7 +23,7 @@ const BlogPost = ({ blok }) => {
   let authorContent = thisAuthor.length ? JSON.parse(thisAuthor[0].node.content) : {};
 
   return (
-    <div {...sbEditable(blok)}>
+    <div {...storyblokEditable(blok)}>
       <div className="bg-white-half w-full">
         <div className="max-w-3xl mx-auto text-center pt-20 flex flex-col items-center">
           <h1 className="text-5xl font-bold font-serif text-primary tracking-wide">
@@ -48,7 +47,7 @@ const BlogPost = ({ blok }) => {
           </div>
         </div>
 
-        { related }
+        {related}
       </div>
     </div>
   )
