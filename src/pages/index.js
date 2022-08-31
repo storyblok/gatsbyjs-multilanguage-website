@@ -5,8 +5,11 @@ import { graphql } from 'gatsby'
 import { useStoryblokState } from "gatsby-source-storyblok"
 
 export default function PageIndex({ data, location }) {
-  let story = data.story
-  story = useStoryblokState(data.story, location)
+  let story = data.storyblokEntry
+  story = useStoryblokState(data.storyblokEntry, {
+    resolveRelations: ["posts-list.posts"],
+    language: location,
+  })
 
   return (
     <Layout location={location}>
@@ -17,7 +20,7 @@ export default function PageIndex({ data, location }) {
 
 export const query = graphql`
   {
-    story: storyblokEntry(full_slug: { eq: "en/" }) {
+    storyblokEntry(full_slug: { eq: "en/" }) {
       name
       content
       full_slug
